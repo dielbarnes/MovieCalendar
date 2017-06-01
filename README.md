@@ -5,9 +5,9 @@ Shows current and upcoming movies in local theaters and allows users to watch tr
 
 ### Features
 Integrates The Movie DB API (https://www.themoviedb.org/documentation/api)  
-Uses Alamofire (https://cocoapods.org/pods/Alamofire)  
-Uses AlamofireImage (https://cocoapods.org/pods/AlamofireImage)  
-Uses SwiftyJSON (https://cocoapods.org/pods/SwiftyJSON)
+Uses Alamofire 4.4.0 (https://cocoapods.org/pods/Alamofire)  
+Uses AlamofireImage 3.2.0 (https://cocoapods.org/pods/AlamofireImage)  
+Uses SwiftyJSON 3.1.4 (https://cocoapods.org/pods/SwiftyJSON)
 
 ### Resources
 Icons are made by me
