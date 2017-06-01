@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		185EB5E68CEAAD08336F7C50 /* Pods_MovieCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361E4A5DFB3AC785DADD07BF /* Pods_MovieCalendar.framework */; };
+		1DD6CF3B9301B57B1C887100 /* Pods_MovieCalendarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5316D397657ED09CE092CE0B /* Pods_MovieCalendarUITests.framework */; };
+		69208A99FFF5ABD5DF4EABC7 /* Pods_MovieCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E04BFDDBC27055E55619199 /* Pods_MovieCalendarTests.framework */; };
+		9706E3C31EE0691D0012EA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3C21EE0691D0012EA26 /* AppDelegate.swift */; };
+		9706E3C51EE0691D0012EA26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3C41EE0691D0012EA26 /* MainViewController.swift */; };
+		9706E3C81EE0691D0012EA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9706E3C61EE0691D0012EA26 /* Main.storyboard */; };
+		9706E3CA1EE0691D0012EA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9706E3C91EE0691D0012EA26 /* Assets.xcassets */; };
+		9706E3D81EE0691D0012EA26 /* MovieCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3D71EE0691D0012EA26 /* MovieCalendarTests.swift */; };
+		9706E3E31EE0691E0012EA26 /* MovieCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3E21EE0691E0012EA26 /* MovieCalendarUITests.swift */; };
+		9706E3F21EE08BA10012EA26 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3F11EE08BA10012EA26 /* Movie.swift */; };
+		9706E3F51EE08DC60012EA26 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3F41EE08DC60012EA26 /* Cast.swift */; };
+		9706E3F71EE097270012EA26 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706E3F61EE097270012EA26 /* DateHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9706E3D41EE0691D0012EA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9706E3B71EE0691D0012EA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9706E3BE1EE0691D0012EA26;
+			remoteInfo = MovieCalendar;
+		};
+		9706E3DF1EE0691E0012EA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9706E3B71EE0691D0012EA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9706E3BE1EE0691D0012EA26;
+			remoteInfo = MovieCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22016C1AB97A25C934CFB7AC /* Pods-MovieCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendarTests/Pods-MovieCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29EA4E73D7D9E32BEE7ACA81 /* Pods-MovieCalendarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendarUITests/Pods-MovieCalendarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		361E4A5DFB3AC785DADD07BF /* Pods_MovieCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E04BFDDBC27055E55619199 /* Pods_MovieCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5316D397657ED09CE092CE0B /* Pods_MovieCalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieCalendarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		713BB97AF2AF92F593450653 /* Pods-MovieCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		7317E53005C1BAB43400CDEB /* Pods-MovieCalendarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendarUITests/Pods-MovieCalendarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		877AC28933D9B9DC90712345 /* Pods-MovieCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendarTests/Pods-MovieCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
+		9706E3BF1EE0691D0012EA26 /* MovieCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9706E3C21EE0691D0012EA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9706E3C41EE0691D0012EA26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9706E3C71EE0691D0012EA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9706E3C91EE0691D0012EA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9706E3CE1EE0691D0012EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9706E3D31EE0691D0012EA26 /* MovieCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9706E3D71EE0691D0012EA26 /* MovieCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCalendarTests.swift; sourceTree = "<group>"; };
+		9706E3D91EE0691E0012EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9706E3DE1EE0691E0012EA26 /* MovieCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9706E3E21EE0691E0012EA26 /* MovieCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCalendarUITests.swift; sourceTree = "<group>"; };
+		9706E3E41EE0691E0012EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9706E3F11EE08BA10012EA26 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9706E3F41EE08DC60012EA26 /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		9706E3F61EE097270012EA26 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		BFE57A8B8ABB7516D9606FB0 /* Pods-MovieCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9706E3BC1EE0691D0012EA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185EB5E68CEAAD08336F7C50 /* Pods_MovieCalendar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9706E3D01EE0691D0012EA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69208A99FFF5ABD5DF4EABC7 /* Pods_MovieCalendarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9706E3DB1EE0691E0012EA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD6CF3B9301B57B1C887100 /* Pods_MovieCalendarUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		880FAA795473F55A0C421F9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				361E4A5DFB3AC785DADD07BF /* Pods_MovieCalendar.framework */,
+				4E04BFDDBC27055E55619199 /* Pods_MovieCalendarTests.framework */,
+				5316D397657ED09CE092CE0B /* Pods_MovieCalendarUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9706E3B61EE0691D0012EA26 = {
+			isa = PBXGroup;
+			children = (
+				9706E3C11EE0691D0012EA26 /* MovieCalendar */,
+				9706E3D61EE0691D0012EA26 /* MovieCalendarTests */,
+				9706E3E11EE0691E0012EA26 /* MovieCalendarUITests */,
+				9706E3C01EE0691D0012EA26 /* Products */,
+				9FDE48A6F054C447BEFA09A4 /* Pods */,
+				880FAA795473F55A0C421F9C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9706E3C01EE0691D0012EA26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9706E3BF1EE0691D0012EA26 /* MovieCalendar.app */,
+				9706E3D31EE0691D0012EA26 /* MovieCalendarTests.xctest */,
+				9706E3DE1EE0691E0012EA26 /* MovieCalendarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9706E3C11EE0691D0012EA26 /* MovieCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9706E3C61EE0691D0012EA26 /* Main.storyboard */,
+				9706E3C21EE0691D0012EA26 /* AppDelegate.swift */,
+				9706E3F61EE097270012EA26 /* DateHelper.swift */,
+				9706E3F31EE08D7D0012EA26 /* Models */,
+				9706E3F01EE069BA0012EA26 /* View Controllers */,
+				9706E3C91EE0691D0012EA26 /* Assets.xcassets */,
+				9706E3CE1EE0691D0012EA26 /* Info.plist */,
+			);
+			path = MovieCalendar;
+			sourceTree = "<group>";
+		};
+		9706E3D61EE0691D0012EA26 /* MovieCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				9706E3D71EE0691D0012EA26 /* MovieCalendarTests.swift */,
+				9706E3D91EE0691E0012EA26 /* Info.plist */,
+			);
+			path = MovieCalendarTests;
+			sourceTree = "<group>";
+		};
+		9706E3E11EE0691E0012EA26 /* MovieCalendarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9706E3E21EE0691E0012EA26 /* MovieCalendarUITests.swift */,
+				9706E3E41EE0691E0012EA26 /* Info.plist */,
+			);
+			path = MovieCalendarUITests;
+			sourceTree = "<group>";
+		};
+		9706E3F01EE069BA0012EA26 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9706E3C41EE0691D0012EA26 /* MainViewController.swift */,
+			);
+			name = "View Controllers";
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9706E3F31EE08D7D0012EA26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9706E3F11EE08BA10012EA26 /* Movie.swift */,
+				9706E3F41EE08DC60012EA26 /* Cast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FDE48A6F054C447BEFA09A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFE57A8B8ABB7516D9606FB0 /* Pods-MovieCalendar.debug.xcconfig */,
+				713BB97AF2AF92F593450653 /* Pods-MovieCalendar.release.xcconfig */,
+				22016C1AB97A25C934CFB7AC /* Pods-MovieCalendarTests.debug.xcconfig */,
+				877AC28933D9B9DC90712345 /* Pods-MovieCalendarTests.release.xcconfig */,
+				7317E53005C1BAB43400CDEB /* Pods-MovieCalendarUITests.debug.xcconfig */,
+				29EA4E73D7D9E32BEE7ACA81 /* Pods-MovieCalendarUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9706E3BE1EE0691D0012EA26 /* MovieCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9706E3E71EE0691E0012EA26 /* Build configuration list for PBXNativeTarget "MovieCalendar" */;
+			buildPhases = (
+				991FA6DF71BE855099C32436 /* [CP] Check Pods Manifest.lock */,
+				9706E3BB1EE0691D0012EA26 /* Sources */,
+				9706E3BC1EE0691D0012EA26 /* Frameworks */,
+				9706E3BD1EE0691D0012EA26 /* Resources */,
+				9CC0FD442F67A926C1F51BAF /* [CP] Embed Pods Frameworks */,
+				52F0F602E91307DD73B7F093 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovieCalendar;
+			productName = MovieCalendar;
+			productReference = 9706E3BF1EE0691D0012EA26 /* MovieCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9706E3D21EE0691D0012EA26 /* MovieCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9706E3EA1EE0691E0012EA26 /* Build configuration list for PBXNativeTarget "MovieCalendarTests" */;
+			buildPhases = (
+				9ED1A5E010811645B4801DBA /* [CP] Check Pods Manifest.lock */,
+				9706E3CF1EE0691D0012EA26 /* Sources */,
+				9706E3D01EE0691D0012EA26 /* Frameworks */,
+				9706E3D11EE0691D0012EA26 /* Resources */,
+				2169B8F31A1D2DDB1EEDC40D /* [CP] Embed Pods Frameworks */,
+				9A4E062A5EAB68601038E5C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9706E3D51EE0691D0012EA26 /* PBXTargetDependency */,
+			);
+			name = MovieCalendarTests;
+			productName = MovieCalendarTests;
+			productReference = 9706E3D31EE0691D0012EA26 /* MovieCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9706E3DD1EE0691E0012EA26 /* MovieCalendarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9706E3ED1EE0691E0012EA26 /* Build configuration list for PBXNativeTarget "MovieCalendarUITests" */;
+			buildPhases = (
+				D3B45D7294CBCA3F4AE246C9 /* [CP] Check Pods Manifest.lock */,
+				9706E3DA1EE0691E0012EA26 /* Sources */,
+				9706E3DB1EE0691E0012EA26 /* Frameworks */,
+				9706E3DC1EE0691E0012EA26 /* Resources */,
+				111EFDF43B9658385C606729 /* [CP] Embed Pods Frameworks */,
+				380109A7880053284E4971D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9706E3E01EE0691E0012EA26 /* PBXTargetDependency */,
+			);
+			name = MovieCalendarUITests;
+			productName = MovieCalendarUITests;
+			productReference = 9706E3DE1EE0691E0012EA26 /* MovieCalendarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9706E3B71EE0691D0012EA26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Diel Barnes";
+				TargetAttributes = {
+					9706E3BE1EE0691D0012EA26 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6DZGSGTVV9;
+						ProvisioningStyle = Automatic;
+					};
+					9706E3D21EE0691D0012EA26 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6DZGSGTVV9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9706E3BE1EE0691D0012EA26;
+					};
+					9706E3DD1EE0691E0012EA26 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6DZGSGTVV9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9706E3BE1EE0691D0012EA26;
+					};
+				};
+			};
+			buildConfigurationList = 9706E3BA1EE0691D0012EA26 /* Build configuration list for PBXProject "MovieCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9706E3B61EE0691D0012EA26;
+			productRefGroup = 9706E3C01EE0691D0012EA26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9706E3BE1EE0691D0012EA26 /* MovieCalendar */,
+				9706E3D21EE0691D0012EA26 /* MovieCalendarTests */,
+				9706E3DD1EE0691E0012EA26 /* MovieCalendarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9706E3BD1EE0691D0012EA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9706E3CA1EE0691D0012EA26 /* Assets.xcassets in Resources */,
+				9706E3C81EE0691D0012EA26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9706E3D11EE0691D0012EA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9706E3DC1EE0691E0012EA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		111EFDF43B9658385C606729 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCalendarUITests/Pods-MovieCalendarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2169B8F31A1D2DDB1EEDC40D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCalendarTests/Pods-MovieCalendarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		380109A7880053284E4971D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCalendarUITests/Pods-MovieCalendarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52F0F602E91307DD73B7F093 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		991FA6DF71BE855099C32436 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A4E062A5EAB68601038E5C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCalendarTests/Pods-MovieCalendarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CC0FD442F67A926C1F51BAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED1A5E010811645B4801DBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B45D7294CBCA3F4AE246C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9706E3BB1EE0691D0012EA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9706E3F71EE097270012EA26 /* DateHelper.swift in Sources */,
+				9706E3F51EE08DC60012EA26 /* Cast.swift in Sources */,
+				9706E3C51EE0691D0012EA26 /* MainViewController.swift in Sources */,
+				9706E3C31EE0691D0012EA26 /* AppDelegate.swift in Sources */,
+				9706E3F21EE08BA10012EA26 /* Movie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9706E3CF1EE0691D0012EA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9706E3D81EE0691D0012EA26 /* MovieCalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9706E3DA1EE0691E0012EA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9706E3E31EE0691E0012EA26 /* MovieCalendarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9706E3D51EE0691D0012EA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9706E3BE1EE0691D0012EA26 /* MovieCalendar */;
+			targetProxy = 9706E3D41EE0691D0012EA26 /* PBXContainerItemProxy */;
+		};
+		9706E3E01EE0691E0012EA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9706E3BE1EE0691D0012EA26 /* MovieCalendar */;
+			targetProxy = 9706E3DF1EE0691E0012EA26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9706E3C61EE0691D0012EA26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9706E3C71EE0691D0012EA26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9706E3E51EE0691E0012EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9706E3E61EE0691E0012EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9706E3E81EE0691E0012EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFE57A8B8ABB7516D9606FB0 /* Pods-MovieCalendar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6DZGSGTVV9;
+				INFOPLIST_FILE = MovieCalendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dielbarnes.MovieCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9706E3E91EE0691E0012EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 713BB97AF2AF92F593450653 /* Pods-MovieCalendar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6DZGSGTVV9;
+				INFOPLIST_FILE = MovieCalendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dielbarnes.MovieCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9706E3EB1EE0691E0012EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22016C1AB97A25C934CFB7AC /* Pods-MovieCalendarTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6DZGSGTVV9;
+				INFOPLIST_FILE = MovieCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dielbarnes.MovieCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieCalendar.app/MovieCalendar";
+			};
+			name = Debug;
+		};
+		9706E3EC1EE0691E0012EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 877AC28933D9B9DC90712345 /* Pods-MovieCalendarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6DZGSGTVV9;
+				INFOPLIST_FILE = MovieCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dielbarnes.MovieCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieCalendar.app/MovieCalendar";
+			};
+			name = Release;
+		};
+		9706E3EE1EE0691E0012EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7317E53005C1BAB43400CDEB /* Pods-MovieCalendarUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6DZGSGTVV9;
+				INFOPLIST_FILE = MovieCalendarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dielbarnes.MovieCalendarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MovieCalendar;
+			};
+			name = Debug;
+		};
+		9706E3EF1EE0691E0012EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29EA4E73D7D9E32BEE7ACA81 /* Pods-MovieCalendarUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6DZGSGTVV9;
+				INFOPLIST_FILE = MovieCalendarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dielbarnes.MovieCalendarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MovieCalendar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9706E3BA1EE0691D0012EA26 /* Build configuration list for PBXProject "MovieCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9706E3E51EE0691E0012EA26 /* Debug */,
+				9706E3E61EE0691E0012EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9706E3E71EE0691E0012EA26 /* Build configuration list for PBXNativeTarget "MovieCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9706E3E81EE0691E0012EA26 /* Debug */,
+				9706E3E91EE0691E0012EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9706E3EA1EE0691E0012EA26 /* Build configuration list for PBXNativeTarget "MovieCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9706E3EB1EE0691E0012EA26 /* Debug */,
+				9706E3EC1EE0691E0012EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9706E3ED1EE0691E0012EA26 /* Build configuration list for PBXNativeTarget "MovieCalendarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9706E3EE1EE0691E0012EA26 /* Debug */,
+				9706E3EF1EE0691E0012EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9706E3B71EE0691D0012EA26 /* Project object */;
+}

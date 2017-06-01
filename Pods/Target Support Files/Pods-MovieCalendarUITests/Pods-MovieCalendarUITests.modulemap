@@ -1,0 +1,6 @@
+framework module Pods_MovieCalendarUITests {
+  umbrella header "Pods-MovieCalendarUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

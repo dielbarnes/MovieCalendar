@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MainViewController" customModule="MovieCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U9k-Ca-0fb">
+                                <rect key="frame" x="5" y="20" width="365" height="637"/>
+                                <color key="backgroundColor" red="0.0" green="0.1333333333" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yYs-5U-q74">
+                                    <size key="itemSize" width="120" height="199"/>
+                                    <size key="headerReferenceSize" width="50" height="70"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="TLf-ef-HC4">
+                                        <rect key="frame" x="0.0" y="70" width="120" height="199"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="123" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-BJ-gCt">
+                                                    <rect key="frame" x="5" y="0.0" width="110" height="165"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="165" id="oTm-Ci-zQm"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="456" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo1-u2-95n">
+                                                    <rect key="frame" x="45" y="170" width="30" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="ERD-se-O4x"/>
+                                                        <constraint firstAttribute="width" constant="30" id="dSl-uE-DTc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.89019607840000003" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iyP-BJ-gCt" secondAttribute="trailing" constant="5" id="Kzt-dD-klS"/>
+                                            <constraint firstItem="iyP-BJ-gCt" firstAttribute="leading" secondItem="TLf-ef-HC4" secondAttribute="leading" constant="5" id="MYS-fi-jv4"/>
+                                            <constraint firstItem="Qo1-u2-95n" firstAttribute="centerX" secondItem="TLf-ef-HC4" secondAttribute="centerX" id="SFE-gw-U0R"/>
+                                            <constraint firstItem="Qo1-u2-95n" firstAttribute="top" secondItem="iyP-BJ-gCt" secondAttribute="bottom" constant="5" id="hFu-yI-MBi"/>
+                                            <constraint firstItem="iyP-BJ-gCt" firstAttribute="top" secondItem="TLf-ef-HC4" secondAttribute="top" id="tYv-f0-OyC"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MonthHeaderView" id="vd2-dw-Clh">
+                                    <rect key="frame" x="0.0" y="0.0" width="365" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-kj-QgK">
+                                            <rect key="frame" x="116" y="35" width="133" height="1"/>
+                                            <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="deviceRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="2I8-pC-eDZ"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="123" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUNE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-iy-hcT">
+                                            <rect key="frame" x="142.5" y="20.5" width="80" height="29"/>
+                                            <color key="backgroundColor" red="1" green="0.8901960784313725" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="7Fu-yv-dAT"/>
+                                                <constraint firstAttribute="width" constant="80" id="PBu-PA-KfW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.1333333333" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="C1I-kj-QgK" firstAttribute="width" secondItem="z4B-iy-hcT" secondAttribute="width" multiplier="100:60" id="Epg-Fh-fGi"/>
+                                        <constraint firstItem="C1I-kj-QgK" firstAttribute="centerX" secondItem="vd2-dw-Clh" secondAttribute="centerX" id="SSu-c6-ec0"/>
+                                        <constraint firstItem="C1I-kj-QgK" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" id="U4k-iZ-fOI"/>
+                                        <constraint firstItem="z4B-iy-hcT" firstAttribute="centerX" secondItem="vd2-dw-Clh" secondAttribute="centerX" id="VQr-W9-EoE"/>
+                                        <constraint firstItem="z4B-iy-hcT" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" id="wXl-jo-t8j"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6ve-6v-4Ov"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZLO-xg-q0L"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.13333333333333333" blue="0.27843137254901962" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U9k-Ca-0fb" secondAttribute="trailing" constant="5" id="GaZ-b2-ZIn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U9k-Ca-0fb" secondAttribute="bottom" constant="10" id="JwW-sz-OXW"/>
+                            <constraint firstItem="U9k-Ca-0fb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g9e-Gr-p3m"/>
+                            <constraint firstItem="U9k-Ca-0fb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="h31-fC-yxu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieCollectionView" destination="U9k-Ca-0fb" id="rhV-8X-XG2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
