@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct Movie {
     
     var id: Int
     var title: String
-    var posterPath: String
+    var poster: UIImage?
+    var posterPath: String?
     var genres: [String]?
     var cast: [Cast]?
     var synopsis: String?
