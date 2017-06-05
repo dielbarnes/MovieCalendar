@@ -26,7 +26,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var movieCollectionView: UICollectionView!
+    @IBOutlet weak var moviesCollectionView: UICollectionView!
     @IBOutlet weak var noMoviesLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -43,14 +43,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         //Data
         
-        
-        
-        // TODO: - local movies, upcoming movies, check for duplicates, test load more
+        // TODO: - Get upcoming movies
         
         getMovies()
-        
-        
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -121,6 +116,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     posterPath = jsonPosterPath
                                 }
                                 
+                                var backdropPath: String?
+                                if let jsonBackdropPath = result["backdrop_path"].string {
+                                    backdropPath = jsonBackdropPath
+                                }
+                                
                                 var releaseDate = Date()
                                 if let jsonReleaseDateString = result["release_date"].string, let jsonReleaseDate = jsonReleaseDateString.dateFromISO8601 {
                                     releaseDate = jsonReleaseDate
@@ -130,6 +130,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                                   title: title,
                                                   poster: nil,
                                                   posterPath: posterPath,
+                                                  backdrop: nil,
+                                                  backdropPath: backdropPath,
                                                   genres: nil,
                                                   cast: nil,
                                                   synopsis: nil,
@@ -180,7 +182,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                             self.noMoviesLabel.isHidden = false
                         }
                         else {
-                            self.movieCollectionView.reloadData()
+                            self.moviesCollectionView.reloadData()
                         }
                     }
                     
@@ -304,7 +306,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             //Set section title
             
-            let label = view.viewWithTag(123) as! UILabel
+            let label = view.viewWithTag(1) as! UILabel
             label.text = DateFormatter().monthSymbols[monthsWithMovies[indexPath.section]-1].uppercased()
             
             //Adjust label width
@@ -322,10 +324,48 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 }
             }
             
-            //Add film strip border
+            //Film strip border
             
-            let view = view.viewWithTag(456)
-            view?.backgroundColor = UIColor(patternImage: UIImage(named:"film-strip")!)
+            let view1 = view.viewWithTag(2)
+            view1?.backgroundColor = UIColor(patternImage: UIImage(named:"film-strip")!)
+            view1?.layer.cornerRadius = 3.0
+            let view2 = view.viewWithTag(3)
+            view2?.backgroundColor = UIColor(patternImage: UIImage(named:"film-strip")!)
+            let view3 = view.viewWithTag(4)
+            view3?.backgroundColor = UIColor(patternImage: UIImage(named:"film-strip")!)
+            
+            //Folded effect
+            
+            let path1 = UIBezierPath()
+            path1.move(to: CGPoint(x: 55.0, y: 50.0))
+            path1.addLine(to: CGPoint(x: 55.0, y: 35.0))
+            path1.addLine(to: CGPoint(x: 30.0, y: 35.0))
+            path1.addLine(to: CGPoint(x: 30.0, y: 43.0))
+            path1.addLine(to: CGPoint(x: 55.0, y: 50.0))
+            
+            let layer1 = CAShapeLayer()
+            layer1.path = path1.cgPath
+            layer1.fillColor = UIColor(red: 189.0/255.0, green: 142.0/255.0, blue: 0, alpha: 1.0).cgColor
+            view2?.layer.addSublayer(layer1)
+            
+            let path2 = UIBezierPath()
+            path2.move(to: CGPoint(x: 0, y: 50.0))
+            path2.addLine(to: CGPoint(x: 0, y: 35.0))
+            path2.addLine(to: CGPoint(x: 25.0, y: 35.0))
+            path2.addLine(to: CGPoint(x: 25.0, y: 43.0))
+            path2.addLine(to: CGPoint(x: 0, y: 50.0))
+            
+            let layer2 = CAShapeLayer()
+            layer2.path = path2.cgPath
+            layer2.fillColor = UIColor(red: 189.0/255.0, green: 142.0/255.0, blue: 0, alpha: 1.0).cgColor
+            view3?.layer.addSublayer(layer2)
+            
+            //Shadow
+            
+            view1?.layer.shadowOffset = CGSize.zero
+            view1?.layer.shadowColor = UIColor.black.cgColor
+            view1?.layer.shadowRadius = 10.0
+            view1?.layer.shadowOpacity = 0.5
         }
         else {
             view = UICollectionReusableView()
@@ -348,26 +388,33 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
-        let sectionTitle = DateFormatter().monthSymbols[monthsWithMovies[indexPath.section]-1]
-        if let moviesDuringMonth = movies[sectionTitle] {
+        let monthString = DateFormatter().monthSymbols[monthsWithMovies[indexPath.section]-1]
+        if let moviesDuringMonth = movies[monthString] {
             
             let movie = moviesDuringMonth[indexPath.row]
             
+            //Set movie release date
+            
             cell.configureBannerLabel(withDate: movie.releaseDate)
             
-            //Get movie poster
+            //Set movie poster
             
             if movie.poster != nil {
                 cell.posterView.image = movie.poster
                 cell.titleLabel.isHidden = true
             }
-            else if movie.posterPath != nil, let url = URL(string: "https://image.tmdb.org/t/p/w160" + movie.posterPath!) {
+            else if let path = movie.posterPath, let url = URL(string: "https://image.tmdb.org/t/p/w160" + path) {
                 
-                cell.posterView.setImage(withURL: url, placeholderImage: UIImage(named: "placeholder")!, completion: { image in
+                cell.posterView.setImage(withURL: url, placeholderImage: UIImage(named: "poster-placeholder")!, completion: { image in
                     
-                    if image != nil, let index = self.movies[sectionTitle]?.index(where: { $0.id == movie.id }) {
-                        self.movies[sectionTitle]?[index].poster = image
+                    if image != nil, let index = self.movies[monthString]?.index(where: { $0.id == movie.id }) {
+                        self.movies[monthString]?[index].poster = image
                         cell.titleLabel.isHidden = true
+                    }
+                    else {
+                        cell.posterView.image = nil
+                        cell.titleLabel.text = movie.title
+                        cell.titleLabel.isHidden = false
                     }
                 })
             }
@@ -383,8 +430,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let sectionTitle = DateFormatter().monthSymbols[monthsWithMovies[indexPath.section]-1]
-        if let moviesDuringMonth = movies[sectionTitle]{
+        //Show movie details
+        
+        let monthString = DateFormatter().monthSymbols[monthsWithMovies[indexPath.section]-1]
+        if let moviesDuringMonth = movies[monthString] {
             
             let movie = moviesDuringMonth[indexPath.row]
             
@@ -405,4 +454,3 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
 }
-

@@ -11,7 +11,7 @@ import Alamofire
 
 extension UIImageView {
     
-    func setImage(withURL url: URL, placeholderImage: UIImage, completion: @escaping (UIImage?) -> Void) {
+    func setImage(withURL url: URL, placeholderImage: UIImage?, completion: ((UIImage?) -> Void)? ) {
         
         self.image = placeholderImage
         
@@ -19,10 +19,10 @@ extension UIImageView {
             
             if let data = response.result.value {
                 self.image = UIImage(data: data)
-                completion(self.image)
+                completion?(self.image)
             }
             else {
-                completion(nil)
+                completion?(nil)
             }
         }
     }

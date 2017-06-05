@@ -15,6 +15,8 @@ struct Movie {
     var title: String
     var poster: UIImage?
     var posterPath: String?
+    var backdrop: UIImage?
+    var backdropPath: String?
     var genres: [String]?
     var cast: [Cast]?
     var synopsis: String?
