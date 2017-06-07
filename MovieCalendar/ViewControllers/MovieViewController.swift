@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import TagListView
+import EventKit
 
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -409,7 +410,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             if let genres = movie?.genres, tagListView.tagViews.count == 0 {
                 
-                tagListView.textFont = UIFont(name:"Avenir", size: 17.0)!
+                tagListView.textFont = UIFont(name:"Avenir", size: 16.0)!
                 tagListView.addTags(genres)
             }
         }
@@ -467,6 +468,76 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func saveToCalendarButtonTapped() {
         
-        // TODO: - Save to calendar
+        guard movie != nil else {
+            return
+        }
+        
+        //Save movie release date to calendar
+        
+        let eventStore = EKEventStore()
+        
+        eventStore.requestAccess(to: EKEntityType.event, completion: { granted, accessError in
+            
+            if granted && accessError == nil {
+                
+                let event = EKEvent(eventStore: eventStore)
+                event.title = self.movie!.title
+                event.startDate = self.movie!.releaseDate
+                event.endDate = self.movie!.releaseDate
+                event.isAllDay = true
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                
+                DispatchQueue.global(qos: .background).async {
+                    
+                    DispatchQueue.main.async {
+                        self.activityIndicator.startAnimating()
+                    }
+                    
+                    do {
+                        
+                        try eventStore.save(event, span: .thisEvent)
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.activityIndicator.stopAnimating()
+                            self.showAlert(title: nil, message: "Successfully saved to calendar")
+                        }
+                        
+                    } catch let error {
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.activityIndicator.stopAnimating()
+                            self.showAlert(title: "Failed To Save To Calendar", message: error.localizedDescription)
+                        }
+                    }
+                }
+            }
+            else {
+                
+                var title: String?
+                var message: String?
+                if !granted {
+                    title = "Calendar Access Required"
+                    message = "Go to Settings > Privacy > Calendars and switch MovieCalendar to ON"
+                }
+                else {
+                    title = "Failed To Access Calendar"
+                    message = accessError?.localizedDescription
+                }
+                
+                self.showAlert(title: title, message: message)
+            }
+        })
+    }
+    
+    // MARK: - Alert Methods
+    
+    func showAlert(title: String?, message: String?) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
