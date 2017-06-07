@@ -19,7 +19,7 @@ struct Movie {
     var backdropPath: String?
     var genres: [String]?
     var cast: [Cast]?
-    var synopsis: String?
+    var plot: String?
     var trailerPath: String?
     var releaseDate: Date
 }

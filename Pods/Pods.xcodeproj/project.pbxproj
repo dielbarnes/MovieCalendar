@@ -7,134 +7,173 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02447D86015CF4BFC3816B1A8D186303 /* Pods-MovieCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD16D7B45B75DA88FCB2D78CFE0249E /* Pods-MovieCalendar-dummy.m */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D182500FF4918391F97385DAE996449 /* Timeline.swift */; };
-		137C7B0EBCBE378EF8A61D2280CFBFEA /* Pods-MovieCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FFA418B84C5899C25897F7024676B0 /* Pods-MovieCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0200531CBDFCBDE9435DD5E2E420548A /* TagListView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C427D5C929D5FD6AAAC24CFF446498A /* TagListView-dummy.m */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394EE11131CD128581EB5963C5EB9DE /* Timeline.swift */; };
 		150F2635DC5D4A5AB04CB2C0A87F40AA /* Pods-MovieCalendarUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4FAE8022EB76002F962E1C49E5FD4 /* Pods-MovieCalendarUITests-dummy.m */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94276CF887593FC21A638F4E2F1F4A42 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16000854234D609A4DD576058117CF12 /* TagListView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEB9D495119B8106EB6CA9646F55136 /* TagListView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B614E50314626B0B192D230C6CF7F55 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5EA87BF920C48BB519D001B4E76B1 /* SwiftyJSON.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAFE04C0D6E6998B695B700F6B94D2E3 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20D924E2A7B2515404CB83B2C1F8F750 /* Pods-MovieCalendarUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C97BE85415F2B43293A833015B0AC09F /* Pods-MovieCalendarUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		217CBE3958FA337178572EC152C2FECD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */; };
-		2B2C06588DFA84B575F80F86ECC8A3D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBEB670658597FB7864005ED913ECB6 /* Request.swift */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */; };
+		2779B47D38FDFFFD6C111F9F1204BD67 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7121FBACC46BAF4DA649B5A671990A8 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283F2A593BA39DF3B21F758F6EF5404 /* TaskDelegate.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045A2B8552C0E4CCA6E73F7C8CF7BB0 /* Request.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECD28ADE1A3814E515D506C8644EF68 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E8F01E3EAF077400EF4398C216900 /* ServerTrustPolicy.swift */; };
 		68EA7A71B3FA4E4C1B0CD8CD6BAD204A /* Pods-MovieCalendarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D7C691D240EC27EA69F58FB71F4D /* Pods-MovieCalendarTests-dummy.m */; };
+		6A86B487E9B5B7A2C53AF00D5D3A11F6 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD786AA85BFB4D486AC872900B65035 /* TagView.swift */; };
+		6ABD3CB721D3948CC545A38360990879 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B2E9EB87EA7FAC661AD1B6AE1F407 /* SwiftyJSON-dummy.m */; };
+		6B111E9D15E0EB43D8F7C1FF22426C9F /* Pods-MovieCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FFA418B84C5899C25897F7024676B0 /* Pods-MovieCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CDB9137A7113BE3838AB4EA72D877DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		73CFE9D7A97B2C1122EF1F5C0F5C12B8 /* Pods-MovieCalendarTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D3F8BD9F054D8DADF6C324DB03975E7 /* Pods-MovieCalendarTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */; };
-		89CFEE394FBC9B61E02204F76537347D /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C7C311169F3CAF970644274FB0787A /* SwiftyJSON-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36690E1BFAB2799D5BE4ABA3C3805F /* SessionDelegate.swift */; };
+		7C973F12DB095BAF3FE8A2B646EA5081 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21E8BC5E1C7D2D0D977DCE8742BD08 /* CloseButton.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE15303F553532D8275CE87DD145D0 /* Result.swift */; };
 		8B2A06D9266FC40F09FFAF6C59071204 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9637884507176F96A4A346524941B7E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1634FA3E2F5577B752A2A95EF63B4B81 /* Alamofire-dummy.m */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F49FBA20BC96954B56110A1FB0535 /* MultipartFormData.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */; };
-		BF3E37AFD66FD2962A93FDFA0A47D228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */; };
-		D3D29C89D0B0A4AD9C4403933141470D /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5B8F6AE942BA3D7E8C0B8732349B67 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38074D3B11C39E121F4753040A182D /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EB8BD754744A397E9DF62403EC818 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6235A7AA3A21080AC97E13374957FA /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1128E99CF94EDF06F7FB0D56186248 /* SessionManager.swift */; };
+		B2D8C3C4636F72304B9904B23F8063D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354C40E9E88D0ADEF864975A413AAA30 /* MultipartFormData.swift */; };
+		B8B2537567455139C0D9C73F2FC9E8E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA32124995EA2E95C70D99C320B6CF /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34674F6B5CB9DD129F580FD4B4831C /* ParameterEncoding.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FCCA3F7706C472E2539357D5ACC05 /* Response.swift */; };
+		D35D6E61E78EEE76EFF7B13ABB4CF0B9 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679237830E01623AC15622D50618530B /* TagListView.swift */; };
+		DE7BE5FD169AD04070F941180F3CF30A /* Pods-MovieCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD16D7B45B75DA88FCB2D78CFE0249E /* Pods-MovieCalendar-dummy.m */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1DD9BA51F5ABD37D48D352593392E /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BDD816F045220AFDAE253B28A5ABAC /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76D3FA168CFEC77FDE4C5299FB1220A /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01C9BE0BDF8C6487B7EFC57E2A35925C /* PBXContainerItemProxy */ = {
+		3A529C616CDCAC1AA543E9552C5846C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
 			remoteInfo = Alamofire;
 		};
-		030D3B3D5B4AABEF8B2A2DF7E2FF25D9 /* PBXContainerItemProxy */ = {
+		655EAEFB550B63E2972164373826ACF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B342B3D474197219C72ADC3D529B3490;
+			remoteGlobalIDString = D2B7DEBA52DD473A8873FF6B21CE0F77;
+			remoteInfo = TagListView;
+		};
+		89D3AFB19FFCA55A765D5275C12A0240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BFAFBAB527BD126DAAC9D0616637DE5;
 			remoteInfo = SwiftyJSON;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		0663C3FF4AA50A78F4E951180AF9AF8E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C8E0A3922751D0E953598B6BCC5413 /* Pods-MovieCalendarTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieCalendarTests-frameworks.sh"; sourceTree = "<group>"; };
-		09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		1634FA3E2F5577B752A2A95EF63B4B81 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		17C7C311169F3CAF970644274FB0787A /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		0C427D5C929D5FD6AAAC24CFF446498A /* TagListView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TagListView-dummy.m"; sourceTree = "<group>"; };
+		179E8F01E3EAF077400EF4398C216900 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		1C1128E99CF94EDF06F7FB0D56186248 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		21F5E75A080E2B25E3C8C12D1A059E8E /* Pods-MovieCalendarTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieCalendarTests-resources.sh"; sourceTree = "<group>"; };
-		26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		292AA55252B0881A287580B3AC4C5B9A /* Pods-MovieCalendarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieCalendarUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D182500FF4918391F97385DAE996449 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		2EF3D161B4D3BA0DFB23119504A4863B /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		2ECD28ADE1A3814E515D506C8644EF68 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		3480E7719A1C5F09E0B3C3EDED88D59C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354C40E9E88D0ADEF864975A413AAA30 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		37203B4398CCB5F69E25B9EBC868471A /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		378E9DDE56A1B0E802171ECA1171764B /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		38E9EFE0CE58AE92DDA64C8B59158E7F /* Pods-MovieCalendarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieCalendarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49989BD900C2E5CF73CE0E80D3C161E7 /* Pods_MovieCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieCalendarTests.framework; path = "Pods-MovieCalendarTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F9FF08FE95C5E8E3C96C11D6D91D71 /* Pods-MovieCalendarUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MovieCalendarUITests.modulemap"; sourceTree = "<group>"; };
-		5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		59E19C5BD5CCF7B96F8E848C7BD2235F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF1165C9645862E01B543AA751305AF /* Pods-MovieCalendarTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MovieCalendarTests.modulemap"; sourceTree = "<group>"; };
 		648E6DD8C667C83B1A40CDF061439291 /* Pods-MovieCalendar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieCalendar-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		671AC3912A82EB01252CAB137457486A /* Pods_MovieCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieCalendar.framework; path = "Pods-MovieCalendar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		672EC0E1A60196E6470C3EDBA37DD099 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		679237830E01623AC15622D50618530B /* TagListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagListView.swift; path = TagListView/TagListView.swift; sourceTree = "<group>"; };
+		69F5EA87BF920C48BB519D001B4E76B1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		6D3F8BD9F054D8DADF6C324DB03975E7 /* Pods-MovieCalendarTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieCalendarTests-umbrella.h"; sourceTree = "<group>"; };
-		7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		7BD1D581B483AF8736F68B34656AEA1F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		6F7FCCA3F7706C472E2539357D5ACC05 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		74D62D3D454F7DE38CFE3E35A236BE92 /* Pods_MovieCalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieCalendarUITests.framework; path = "Pods-MovieCalendarUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79020CB9663A1E0354A81174C11518F6 /* TagListView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TagListView.xcconfig; sourceTree = "<group>"; };
+		7939913ABC5BE47703806EFB96D1DFE7 /* TagListView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TagListView.modulemap; sourceTree = "<group>"; };
 		7CA4FAE8022EB76002F962E1C49E5FD4 /* Pods-MovieCalendarUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieCalendarUITests-dummy.m"; sourceTree = "<group>"; };
+		7CBE15303F553532D8275CE87DD145D0 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		7CD786AA85BFB4D486AC872900B65035 /* TagView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = TagListView/TagView.swift; sourceTree = "<group>"; };
 		80EF561E7D5BF767676CFCA9D193A99E /* Pods-MovieCalendarUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieCalendarUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		82BDD816F045220AFDAE253B28A5ABAC /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		8BB6CC40E37732655314CD0447EB380A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D3F7867B740DD55F4C3FC30703912A0 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		8EDB8504EA217991E4DF8AA07A0DE960 /* TagListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TagListView.framework; path = TagListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F34674F6B5CB9DD129F580FD4B4831C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		90DD229C3CFDBCA8D4D2AB8CB06F251E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		927159AC28B562B9F78B38834A07F0DA /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		91D7439D45FC2ABB6F22583F8FAD92EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		938F20BA5AB931C7E41712E90ACA34D0 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94276CF887593FC21A638F4E2F1F4A42 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		98B27948BB6E425CCDA3047B7BA8008C /* Pods-MovieCalendar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieCalendar-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D452EF1EB36B922BF54C271048F2A04 /* Pods_MovieCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieCalendarTests.framework; path = "Pods-MovieCalendarTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6349524DE436F1A15BC041FD44E9B3 /* Pods-MovieCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A044DF8F41C0AEAA69477FAEF0394446 /* Pods-MovieCalendarUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieCalendarUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A3BAEF695094AA85DD7AC26E47D95EF2 /* Pods-MovieCalendarUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieCalendarUITests-frameworks.sh"; sourceTree = "<group>"; };
-		AEBEB670658597FB7864005ED913ECB6 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		AF748B9E1848C5D6DD73C0C1A7A36AE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6A5215FB880BC59058575605CE5FC65 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44B2E9EB87EA7FAC661AD1B6AE1F407 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		A632C7E626311B7D9D413FFF122D0AD7 /* Pods_MovieCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieCalendar.framework; path = "Pods-MovieCalendar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7121FBACC46BAF4DA649B5A671990A8 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		A76D3FA168CFEC77FDE4C5299FB1220A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		AAEA32124995EA2E95C70D99C320B6CF /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		AD6235A7AA3A21080AC97E13374957FA /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		B394EE11131CD128581EB5963C5EB9DE /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		B75BB9166D686F3ED5A821209FBBEB9A /* Pods-MovieCalendar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieCalendar-frameworks.sh"; sourceTree = "<group>"; };
-		BA5B8F6AE942BA3D7E8C0B8732349B67 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		BA8EB8BD754744A397E9DF62403EC818 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		BAFE04C0D6E6998B695B700F6B94D2E3 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		BB95E24504D3B13B7FF090387EBCAADE /* Pods-MovieCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieCalendar.release.xcconfig"; sourceTree = "<group>"; };
-		BBB35A84F9B5B4A7557BE137735EFE90 /* Pods_MovieCalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieCalendarUITests.framework; path = "Pods-MovieCalendarUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA1DD9BA51F5ABD37D48D352593392E /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		C0790D3474BA63F46E38B6118A0EE8A6 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		C97BE85415F2B43293A833015B0AC09F /* Pods-MovieCalendarUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieCalendarUITests-umbrella.h"; sourceTree = "<group>"; };
+		C9A65DA64DA0786A1E55C40E0E794BE6 /* TagListView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagListView-prefix.pch"; sourceTree = "<group>"; };
+		CAEB9D495119B8106EB6CA9646F55136 /* TagListView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagListView-umbrella.h"; sourceTree = "<group>"; };
 		CC233F4031E96E305507C359722BF00B /* Pods-MovieCalendarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieCalendarUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		D045A2B8552C0E4CCA6E73F7C8CF7BB0 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		D05E9B6CC5EBCC94F5ABAAC8C4FF832F /* Pods-MovieCalendar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieCalendar-acknowledgements.plist"; sourceTree = "<group>"; };
+		D283F2A593BA39DF3B21F758F6EF5404 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		D630CA39BFB4AC2C3B60C86F37267BAE /* Pods-MovieCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6FFA418B84C5899C25897F7024676B0 /* Pods-MovieCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieCalendar-umbrella.h"; sourceTree = "<group>"; };
-		D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		DA36690E1BFAB2799D5BE4ABA3C3805F /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		DAD16D7B45B75DA88FCB2D78CFE0249E /* Pods-MovieCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieCalendar-dummy.m"; sourceTree = "<group>"; };
-		DE99AF16AC7077B672DAE5DAD765B367 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		E42F49FBA20BC96954B56110A1FB0535 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		E8202EA65D7F9777D78833FBE8F42BF1 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		E8113DE4C2B59D4E96E000822D158693 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		E8F74886DABCA63EB36A139D3C5DF0AD /* Pods-MovieCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieCalendar.debug.xcconfig"; sourceTree = "<group>"; };
-		EEF1DD17D00D8B108483FE2FEE2ED4DA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		F3BB4BCB094A766685617973F0D95968 /* Pods-MovieCalendarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieCalendarTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F406129E278125E614BEA0A0BEAA4BE1 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		F9A6D7C691D240EC27EA69F58FB71F4D /* Pods-MovieCalendarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieCalendarTests-dummy.m"; sourceTree = "<group>"; };
 		F9E7E9149A25426E6EF07A48EE0BD430 /* Pods-MovieCalendarUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieCalendarUITests-resources.sh"; sourceTree = "<group>"; };
-		FC61F6341066AC51394924B7EA2CF193 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB3485AE5ECFF5E844BF87AA2AAF43D5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC21E8BC5E1C7D2D0D977DCE8742BD08 /* CloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloseButton.swift; path = TagListView/CloseButton.swift; sourceTree = "<group>"; };
+		FD38074D3B11C39E121F4753040A182D /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		FE18DB57F3E0307566EA54452A1CCCB4 /* Pods-MovieCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MovieCalendar.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E6088C43A88EADD104938EF8F419229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDB9137A7113BE3838AB4EA72D877DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1FC23D5E1E079EC7AE0582B7CA763B9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8B2A06D9266FC40F09FFAF6C59071204 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4784CD5A8C13DD54C51CCAF6DB2E90CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2D8C3C4636F72304B9904B23F8063D2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,14 +185,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66DAE0E2EFBB789BB5784644619D500A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B2C06588DFA84B575F80F86ECC8A3D4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,11 +193,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD309A7649775741FBBF361A13CA91E1 /* Frameworks */ = {
+		D025669FD2CCA4D750155B127915B337 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF3E37AFD66FD2962A93FDFA0A47D228 /* Foundation.framework in Frameworks */,
+				B8B2537567455139C0D9C73F2FC9E8E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +240,32 @@
 			path = "Target Support Files/Pods-MovieCalendarTests";
 			sourceTree = "<group>";
 		};
+		55C1C3988278AD50078593ACDDF66A6F /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				FD38074D3B11C39E121F4753040A182D /* AFError.swift */,
+				A76D3FA168CFEC77FDE4C5299FB1220A /* Alamofire.swift */,
+				2ECD28ADE1A3814E515D506C8644EF68 /* DispatchQueue+Alamofire.swift */,
+				354C40E9E88D0ADEF864975A413AAA30 /* MultipartFormData.swift */,
+				BA8EB8BD754744A397E9DF62403EC818 /* NetworkReachabilityManager.swift */,
+				BFA1DD9BA51F5ABD37D48D352593392E /* Notifications.swift */,
+				8F34674F6B5CB9DD129F580FD4B4831C /* ParameterEncoding.swift */,
+				D045A2B8552C0E4CCA6E73F7C8CF7BB0 /* Request.swift */,
+				6F7FCCA3F7706C472E2539357D5ACC05 /* Response.swift */,
+				82BDD816F045220AFDAE253B28A5ABAC /* ResponseSerialization.swift */,
+				7CBE15303F553532D8275CE87DD145D0 /* Result.swift */,
+				179E8F01E3EAF077400EF4398C216900 /* ServerTrustPolicy.swift */,
+				DA36690E1BFAB2799D5BE4ABA3C3805F /* SessionDelegate.swift */,
+				1C1128E99CF94EDF06F7FB0D56186248 /* SessionManager.swift */,
+				D283F2A593BA39DF3B21F758F6EF5404 /* TaskDelegate.swift */,
+				B394EE11131CD128581EB5963C5EB9DE /* Timeline.swift */,
+				AAEA32124995EA2E95C70D99C320B6CF /* Validation.swift */,
+				7A079F778CBF5428E1C6A259525F7A63 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
 		62C3251CB7C44425BE9CA0136B69A750 /* Pods-MovieCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,27 +284,15 @@
 			path = "Target Support Files/Pods-MovieCalendar";
 			sourceTree = "<group>";
 		};
-		6318E9E95BC3CD0ECF35639AC49B1089 /* Products */ = {
+		7A079F778CBF5428E1C6A259525F7A63 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8D3F7867B740DD55F4C3FC30703912A0 /* Alamofire.framework */,
-				671AC3912A82EB01252CAB137457486A /* Pods_MovieCalendar.framework */,
-				9D452EF1EB36B922BF54C271048F2A04 /* Pods_MovieCalendarTests.framework */,
-				BBB35A84F9B5B4A7557BE137735EFE90 /* Pods_MovieCalendarUITests.framework */,
-				B6A5215FB880BC59058575605CE5FC65 /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		75817F13FD582AA366F3A28BAEAFD135 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EEF1DD17D00D8B108483FE2FEE2ED4DA /* Alamofire.modulemap */,
-				927159AC28B562B9F78B38834A07F0DA /* Alamofire.xcconfig */,
-				1634FA3E2F5577B752A2A95EF63B4B81 /* Alamofire-dummy.m */,
-				2EF3D161B4D3BA0DFB23119504A4863B /* Alamofire-prefix.pch */,
-				94276CF887593FC21A638F4E2F1F4A42 /* Alamofire-umbrella.h */,
-				AF748B9E1848C5D6DD73C0C1A7A36AE2 /* Info.plist */,
+				C0790D3474BA63F46E38B6118A0EE8A6 /* Alamofire.modulemap */,
+				37203B4398CCB5F69E25B9EBC868471A /* Alamofire.xcconfig */,
+				AD6235A7AA3A21080AC97E13374957FA /* Alamofire-dummy.m */,
+				F406129E278125E614BEA0A0BEAA4BE1 /* Alamofire-prefix.pch */,
+				BAFE04C0D6E6998B695B700F6B94D2E3 /* Alamofire-umbrella.h */,
+				3480E7719A1C5F09E0B3C3EDED88D59C /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
@@ -258,17 +303,53 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				86D8AA6B1E9A5BBF1AE91BD6451D7A84 /* Pods */,
-				6318E9E95BC3CD0ECF35639AC49B1089 /* Products */,
+				9DFCD043A7F5C8D0793AD58BBA2C594A /* Pods */,
+				8B8F4F33F92C844C6B7311557EFB6645 /* Products */,
 				BC3AC22E18EF93F348AED99395AE5751 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		86D8AA6B1E9A5BBF1AE91BD6451D7A84 /* Pods */ = {
+		7F1CACFA3E1562DB492718BEC7ECBF1B /* TagListView */ = {
 			isa = PBXGroup;
 			children = (
-				EB9D3294C408A3132839B3B5B37A96BC /* Alamofire */,
-				C9BFD22DAF08BC7D056B72F0924E9AFE /* SwiftyJSON */,
+				FC21E8BC5E1C7D2D0D977DCE8742BD08 /* CloseButton.swift */,
+				679237830E01623AC15622D50618530B /* TagListView.swift */,
+				7CD786AA85BFB4D486AC872900B65035 /* TagView.swift */,
+				EBB94E2DCD59B7331D52F2DA288E16ED /* Support Files */,
+			);
+			name = TagListView;
+			path = TagListView;
+			sourceTree = "<group>";
+		};
+		8B8F4F33F92C844C6B7311557EFB6645 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0663C3FF4AA50A78F4E951180AF9AF8E /* Alamofire.framework */,
+				A632C7E626311B7D9D413FFF122D0AD7 /* Pods_MovieCalendar.framework */,
+				49989BD900C2E5CF73CE0E80D3C161E7 /* Pods_MovieCalendarTests.framework */,
+				74D62D3D454F7DE38CFE3E35A236BE92 /* Pods_MovieCalendarUITests.framework */,
+				672EC0E1A60196E6470C3EDBA37DD099 /* SwiftyJSON.framework */,
+				8EDB8504EA217991E4DF8AA07A0DE960 /* TagListView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C9A8C927B364C3B0C6BDE82DF38C3CA /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				69F5EA87BF920C48BB519D001B4E76B1 /* SwiftyJSON.swift */,
+				BED60A4C322A54454D6288654CCFE261 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		9DFCD043A7F5C8D0793AD58BBA2C594A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55C1C3988278AD50078593ACDDF66A6F /* Alamofire */,
+				9C9A8C927B364C3B0C6BDE82DF38C3CA /* SwiftyJSON */,
+				7F1CACFA3E1562DB492718BEC7ECBF1B /* TagListView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -291,14 +372,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C9BFD22DAF08BC7D056B72F0924E9AFE /* SwiftyJSON */ = {
+		BED60A4C322A54454D6288654CCFE261 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */,
-				F847E694BA44D7153C3E16A02FE345D4 /* Support Files */,
+				91D7439D45FC2ABB6F22583F8FAD92EB /* Info.plist */,
+				E8113DE4C2B59D4E96E000822D158693 /* SwiftyJSON.modulemap */,
+				938F20BA5AB931C7E41712E90ACA34D0 /* SwiftyJSON.xcconfig */,
+				A44B2E9EB87EA7FAC661AD1B6AE1F407 /* SwiftyJSON-dummy.m */,
+				378E9DDE56A1B0E802171ECA1171764B /* SwiftyJSON-prefix.pch */,
+				A7121FBACC46BAF4DA649B5A671990A8 /* SwiftyJSON-umbrella.h */,
 			);
-			name = SwiftyJSON;
-			path = SwiftyJSON;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -309,54 +394,44 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EB9D3294C408A3132839B3B5B37A96BC /* Alamofire */ = {
+		EBB94E2DCD59B7331D52F2DA288E16ED /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */,
-				F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */,
-				5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */,
-				E42F49FBA20BC96954B56110A1FB0535 /* MultipartFormData.swift */,
-				7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */,
-				09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */,
-				8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */,
-				AEBEB670658597FB7864005ED913ECB6 /* Request.swift */,
-				0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */,
-				26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */,
-				DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */,
-				D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */,
-				332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */,
-				F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */,
-				003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */,
-				2D182500FF4918391F97385DAE996449 /* Timeline.swift */,
-				F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */,
-				75817F13FD582AA366F3A28BAEAFD135 /* Support Files */,
-			);
-			name = Alamofire;
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		F847E694BA44D7153C3E16A02FE345D4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FC61F6341066AC51394924B7EA2CF193 /* Info.plist */,
-				7BD1D581B483AF8736F68B34656AEA1F /* SwiftyJSON.modulemap */,
-				DE99AF16AC7077B672DAE5DAD765B367 /* SwiftyJSON.xcconfig */,
-				17C7C311169F3CAF970644274FB0787A /* SwiftyJSON-dummy.m */,
-				E8202EA65D7F9777D78833FBE8F42BF1 /* SwiftyJSON-prefix.pch */,
-				BA5B8F6AE942BA3D7E8C0B8732349B67 /* SwiftyJSON-umbrella.h */,
+				FB3485AE5ECFF5E844BF87AA2AAF43D5 /* Info.plist */,
+				7939913ABC5BE47703806EFB96D1DFE7 /* TagListView.modulemap */,
+				79020CB9663A1E0354A81174C11518F6 /* TagListView.xcconfig */,
+				0C427D5C929D5FD6AAAC24CFF446498A /* TagListView-dummy.m */,
+				C9A65DA64DA0786A1E55C40E0E794BE6 /* TagListView-prefix.pch */,
+				CAEB9D495119B8106EB6CA9646F55136 /* TagListView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = "../Target Support Files/TagListView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		079B7FC59A46D38AA38DDE8833E4D94F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B111E9D15E0EB43D8F7C1FF22426C9F /* Pods-MovieCalendar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		907BE11189C682678AE79228BD45C504 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				73CFE9D7A97B2C1122EF1F5C0F5C12B8 /* Pods-MovieCalendarTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9250903214AE71C5B3D900CAF208DD23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2779B47D38FDFFFD6C111F9F1204BD67 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,25 +451,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E08BB6C418998C25E3950B1CAEC112EE /* Headers */ = {
+		EE0B4CBD868703622E0AC88BE2DDFB69 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D29C89D0B0A4AD9C4403933141470D /* SwiftyJSON-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E48039F070252F24D36A853E0D46E9BF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				137C7B0EBCBE378EF8A61D2280CFBFEA /* Pods-MovieCalendar-umbrella.h in Headers */,
+				16000854234D609A4DD576058117CF12 /* TagListView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		038AA83D879042EEA203BF0C074AA26C /* Pods-MovieCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CB16D1C07D090259FAE1E0D3BEA895 /* Build configuration list for PBXNativeTarget "Pods-MovieCalendar" */;
+			buildPhases = (
+				80D6109F837CFB8F3640EB9F3B96BFC1 /* Sources */,
+				1E6088C43A88EADD104938EF8F419229 /* Frameworks */,
+				079B7FC59A46D38AA38DDE8833E4D94F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3684873CBA3B7A4FF92EFDC5E2F2E7D7 /* PBXTargetDependency */,
+				C531A63CC8B79720FC0EDD94BA0DB5CC /* PBXTargetDependency */,
+				0A3A89A6964CFB77A96DB656570C20AC /* PBXTargetDependency */,
+			);
+			name = "Pods-MovieCalendar";
+			productName = "Pods-MovieCalendar";
+			productReference = A632C7E626311B7D9D413FFF122D0AD7 /* Pods_MovieCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2D2D9D4DDC2EA81DCCCA44512474F486 /* Pods-MovieCalendarTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A955703F35A529A2B703D974323076AB /* Build configuration list for PBXNativeTarget "Pods-MovieCalendarTests" */;
@@ -409,7 +496,7 @@
 			);
 			name = "Pods-MovieCalendarTests";
 			productName = "Pods-MovieCalendarTests";
-			productReference = 9D452EF1EB36B922BF54C271048F2A04 /* Pods_MovieCalendarTests.framework */;
+			productReference = 49989BD900C2E5CF73CE0E80D3C161E7 /* Pods_MovieCalendarTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		63B770F949D1B0514C82DC9A53213F48 /* Pods-MovieCalendarUITests */ = {
@@ -426,7 +513,7 @@
 			);
 			name = "Pods-MovieCalendarUITests";
 			productName = "Pods-MovieCalendarUITests";
-			productReference = BBB35A84F9B5B4A7557BE137735EFE90 /* Pods_MovieCalendarUITests.framework */;
+			productReference = 74D62D3D454F7DE38CFE3E35A236BE92 /* Pods_MovieCalendarUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
@@ -443,16 +530,16 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 8D3F7867B740DD55F4C3FC30703912A0 /* Alamofire.framework */;
+			productReference = 0663C3FF4AA50A78F4E951180AF9AF8E /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B342B3D474197219C72ADC3D529B3490 /* SwiftyJSON */ = {
+		9BFAFBAB527BD126DAAC9D0616637DE5 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD06FE260C3DB16B462F7BA0E699EADE /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = F447D62B90DD67A762B75E4D478F94A5 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				C949CF57850CC0C61F7A9F0CEFC15AA2 /* Sources */,
-				FD309A7649775741FBBF361A13CA91E1 /* Frameworks */,
-				E08BB6C418998C25E3950B1CAEC112EE /* Headers */,
+				1719ABBB8ADB3067EDABAD79FD5B92CF /* Sources */,
+				D025669FD2CCA4D750155B127915B337 /* Frameworks */,
+				9250903214AE71C5B3D900CAF208DD23 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -460,26 +547,24 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = B6A5215FB880BC59058575605CE5FC65 /* SwiftyJSON.framework */;
+			productReference = 672EC0E1A60196E6470C3EDBA37DD099 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BB69F639101E08EB0D2292427F9AB6E2 /* Pods-MovieCalendar */ = {
+		D2B7DEBA52DD473A8873FF6B21CE0F77 /* TagListView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 415DA28BC0FC6CC6060CE824C152C846 /* Build configuration list for PBXNativeTarget "Pods-MovieCalendar" */;
+			buildConfigurationList = AC42BB3597DD4DCA0519650A03C6CC12 /* Build configuration list for PBXNativeTarget "TagListView" */;
 			buildPhases = (
-				A4B07C01D96D461BD8C40609D4F89940 /* Sources */,
-				66DAE0E2EFBB789BB5784644619D500A /* Frameworks */,
-				E48039F070252F24D36A853E0D46E9BF /* Headers */,
+				4D896EC8D39C196F0DE7030860B70CD8 /* Sources */,
+				4784CD5A8C13DD54C51CCAF6DB2E90CA /* Frameworks */,
+				EE0B4CBD868703622E0AC88BE2DDFB69 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				355B6405805DA6D3FC138618CABD7410 /* PBXTargetDependency */,
-				F07C1020F55A72B7D9910FF197715238 /* PBXTargetDependency */,
 			);
-			name = "Pods-MovieCalendar";
-			productName = "Pods-MovieCalendar";
-			productReference = 671AC3912A82EB01252CAB137457486A /* Pods_MovieCalendar.framework */;
+			name = TagListView;
+			productName = TagListView;
+			productReference = 8EDB8504EA217991E4DF8AA07A0DE960 /* TagListView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -499,20 +584,30 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6318E9E95BC3CD0ECF35639AC49B1089 /* Products */;
+			productRefGroup = 8B8F4F33F92C844C6B7311557EFB6645 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
-				BB69F639101E08EB0D2292427F9AB6E2 /* Pods-MovieCalendar */,
+				038AA83D879042EEA203BF0C074AA26C /* Pods-MovieCalendar */,
 				2D2D9D4DDC2EA81DCCCA44512474F486 /* Pods-MovieCalendarTests */,
 				63B770F949D1B0514C82DC9A53213F48 /* Pods-MovieCalendarUITests */,
-				B342B3D474197219C72ADC3D529B3490 /* SwiftyJSON */,
+				9BFAFBAB527BD126DAAC9D0616637DE5 /* SwiftyJSON */,
+				D2B7DEBA52DD473A8873FF6B21CE0F77 /* TagListView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1719ABBB8ADB3067EDABAD79FD5B92CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ABD3CB721D3948CC545A38360990879 /* SwiftyJSON-dummy.m in Sources */,
+				1B614E50314626B0B192D230C6CF7F55 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +633,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D896EC8D39C196F0DE7030860B70CD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C973F12DB095BAF3FE8A2B646EA5081 /* CloseButton.swift in Sources */,
+				0200531CBDFCBDE9435DD5E2E420548A /* TagListView-dummy.m in Sources */,
+				D35D6E61E78EEE76EFF7B13ABB4CF0B9 /* TagListView.swift in Sources */,
+				6A86B487E9B5B7A2C53AF00D5D3A11F6 /* TagView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6741FEF94D5643FF47F50BD182EDDFDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,11 +652,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4B07C01D96D461BD8C40609D4F89940 /* Sources */ = {
+		80D6109F837CFB8F3640EB9F3B96BFC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02447D86015CF4BFC3816B1A8D186303 /* Pods-MovieCalendar-dummy.m in Sources */,
+				DE7BE5FD169AD04070F941180F3CF30A /* Pods-MovieCalendar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,29 +668,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C949CF57850CC0C61F7A9F0CEFC15AA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89CFEE394FBC9B61E02204F76537347D /* SwiftyJSON-dummy.m in Sources */,
-				217CBE3958FA337178572EC152C2FECD /* SwiftyJSON.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		355B6405805DA6D3FC138618CABD7410 /* PBXTargetDependency */ = {
+		0A3A89A6964CFB77A96DB656570C20AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TagListView;
+			target = D2B7DEBA52DD473A8873FF6B21CE0F77 /* TagListView */;
+			targetProxy = 655EAEFB550B63E2972164373826ACF3 /* PBXContainerItemProxy */;
+		};
+		3684873CBA3B7A4FF92EFDC5E2F2E7D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = 01C9BE0BDF8C6487B7EFC57E2A35925C /* PBXContainerItemProxy */;
+			targetProxy = 3A529C616CDCAC1AA543E9552C5846C2 /* PBXContainerItemProxy */;
 		};
-		F07C1020F55A72B7D9910FF197715238 /* PBXTargetDependency */ = {
+		C531A63CC8B79720FC0EDD94BA0DB5CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
-			target = B342B3D474197219C72ADC3D529B3490 /* SwiftyJSON */;
-			targetProxy = 030D3B3D5B4AABEF8B2A2DF7E2FF25D9 /* PBXContainerItemProxy */;
+			target = 9BFAFBAB527BD126DAAC9D0616637DE5 /* SwiftyJSON */;
+			targetProxy = 89D3AFB19FFCA55A765D5275C12A0240 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -619,44 +722,6 @@
 				PRODUCT_NAME = Pods_MovieCalendarUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2BA4A767B73BB1A5A6034F5060C0409C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB95E24504D3B13B7FF090387EBCAADE /* Pods-MovieCalendar.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieCalendar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MovieCalendar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -735,41 +800,6 @@
 			};
 			name = Debug;
 		};
-		5A4B5C10C4DB36189DFB8CCAA2E5EB2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE99AF16AC7077B672DAE5DAD765B367 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		643C76AA582046977B7877822ED7A258 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -818,9 +848,78 @@
 			};
 			name = Debug;
 		};
-		6BEA4611902268199B7156BED52DFC00 /* Release */ = {
+		69891582851ECA775AF1B2277367A34B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE99AF16AC7077B672DAE5DAD765B367 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 79020CB9663A1E0354A81174C11518F6 /* TagListView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TagListView/TagListView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TagListView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TagListView/TagListView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TagListView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D072D0D174F12EAACC1862DA756E67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37203B4398CCB5F69E25B9EBC868471A /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B4A00EC0F40DAAAB37AE086F1C1ADF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938F20BA5AB931C7E41712E90ACA34D0 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -852,9 +951,44 @@
 			};
 			name = Release;
 		};
-		7D072D0D174F12EAACC1862DA756E67A /* Release */ = {
+		942FEB33CD67AEA99449BDD02BE16719 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 927159AC28B562B9F78B38834A07F0DA /* Alamofire.xcconfig */;
+			baseConfigurationReference = 938F20BA5AB931C7E41712E90ACA34D0 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6823EFB0773216A8C79F916A69077A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79020CB9663A1E0354A81174C11518F6 /* TagListView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -868,14 +1002,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TagListView/TagListView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TagListView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TagListView/TagListView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
+				PRODUCT_NAME = TagListView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -966,9 +1100,47 @@
 			};
 			name = Release;
 		};
+		C8E86502169F5E65B4B84410EFC8D614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB95E24504D3B13B7FF090387EBCAADE /* Pods-MovieCalendar.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MovieCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C9660A42FEDD040185578ADA021EC8E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 927159AC28B562B9F78B38834A07F0DA /* Alamofire.xcconfig */;
+			baseConfigurationReference = 37203B4398CCB5F69E25B9EBC868471A /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1001,7 +1173,7 @@
 			};
 			name = Debug;
 		};
-		F2512B02CE6257EB0850D49E0B99970B /* Debug */ = {
+		D2289A7A111D6A0F48FC843915BA301E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8F74886DABCA63EB36A139D3C5DF0AD /* Pods-MovieCalendar.debug.xcconfig */;
 			buildSettings = {
@@ -1043,20 +1215,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01CB16D1C07D090259FAE1E0D3BEA895 /* Build configuration list for PBXNativeTarget "Pods-MovieCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2289A7A111D6A0F48FC843915BA301E /* Debug */,
+				C8E86502169F5E65B4B84410EFC8D614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				643C76AA582046977B7877822ED7A258 /* Debug */,
 				C03B8870130C98D1B02B59D003687524 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		415DA28BC0FC6CC6060CE824C152C846 /* Build configuration list for PBXNativeTarget "Pods-MovieCalendar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F2512B02CE6257EB0850D49E0B99970B /* Debug */,
-				2BA4A767B73BB1A5A6034F5060C0409C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1079,6 +1251,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AC42BB3597DD4DCA0519650A03C6CC12 /* Build configuration list for PBXNativeTarget "TagListView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69891582851ECA775AF1B2277367A34B /* Debug */,
+				A6823EFB0773216A8C79F916A69077A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BECB4A8192BFA2279E46B7C282839794 /* Build configuration list for PBXNativeTarget "Pods-MovieCalendarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1088,11 +1269,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD06FE260C3DB16B462F7BA0E699EADE /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		F447D62B90DD67A762B75E4D478F94A5 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A4B5C10C4DB36189DFB8CCAA2E5EB2B /* Debug */,
-				6BEA4611902268199B7156BED52DFC00 /* Release */,
+				942FEB33CD67AEA99449BDD02BE16719 /* Debug */,
+				8B4A00EC0F40DAAAB37AE086F1C1ADF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

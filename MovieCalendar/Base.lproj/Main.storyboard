@@ -315,114 +315,61 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.074509803920000006" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GenresCell" textLabel="sVN-wF-ZzM" rowHeight="54" style="IBUITableViewCellStyleDefault" id="Pwt-zO-PYh">
-                                        <rect key="frame" x="0.0" y="323" width="375" height="54"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GenresCell" rowHeight="64" id="Pwt-zO-PYh">
+                                        <rect key="frame" x="0.0" y="323" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pwt-zO-PYh" id="Seb-01-1Am">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sVN-wF-ZzM">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="54"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="  Action  ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="  ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="  ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Adventure">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <font key="NSOriginalFont" size="15" name="Avenir-Medium"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=" ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="15" name="Avenir-Medium"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=" ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="  ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="  ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Romance">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <font key="NSOriginalFont" size="15" name="Avenir-Medium"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=" ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="15" name="Avenir-Medium"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=" ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.31372549019607843" green="0.76078431372549016" blue="0.90588235294117647" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                                <color key="NSColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="17" name="Avenir-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view tag="123" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE6-aE-DiB" customClass="TagListView" customModule="TagListView">
+                                                    <rect key="frame" x="15" y="15" width="345" height="34"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                                            <color key="value" red="0.16078431369999999" green="0.2901960784" blue="0.31764705879999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                            <color key="value" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="tagHighlightedBackgroundColor">
+                                                            <color key="value" red="0.16078431369999999" green="0.2901960784" blue="0.31764705879999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="tagSelectedBackgroundColor">
+                                                            <color key="value" red="0.16078431369999999" green="0.2901960784" blue="0.31764705879999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableRemoveButton" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                                            <real key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="marginY">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="marginX">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AE6-aE-DiB" firstAttribute="leading" secondItem="Seb-01-1Am" secondAttribute="leading" constant="15" id="4hp-Xf-sEg"/>
+                                                <constraint firstAttribute="bottom" secondItem="AE6-aE-DiB" secondAttribute="bottom" constant="15" id="CvA-OJ-npt"/>
+                                                <constraint firstItem="AE6-aE-DiB" firstAttribute="top" secondItem="Seb-01-1Am" secondAttribute="top" constant="15" id="KIX-DJ-63u"/>
+                                                <constraint firstAttribute="trailing" secondItem="AE6-aE-DiB" secondAttribute="trailing" constant="15" id="aeA-Os-SKE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.074509803920000006" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeaderCell" textLabel="KG6-GF-hK3" rowHeight="40" style="IBUITableViewCellStyleDefault" id="c99-uG-IEx">
-                                        <rect key="frame" x="0.0" y="377" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="387" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c99-uG-IEx" id="4EG-yM-2w9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
@@ -439,8 +386,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.074509803920000006" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CastCell" rowHeight="101" id="oow-NV-9B8">
-                                        <rect key="frame" x="0.0" y="417" width="375" height="101"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CastCell" rowHeight="101" id="oow-NV-9B8" customClass="CastCell" customModule="MovieCalendar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="427" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oow-NV-9B8" id="u0e-kK-scz">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
@@ -453,7 +400,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="sb3-X8-C6d"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IJ-aC-gvc">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="8IJ-aC-gvc">
                                                     <rect key="frame" x="15" y="70" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -466,7 +413,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="j7R-8C-X78"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqd-Ut-Zpg">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Iqd-Ut-Zpg">
                                                     <rect key="frame" x="105" y="70" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -479,7 +426,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="PpC-6H-gpk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPB-dm-bcR">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="IPB-dm-bcR">
                                                     <rect key="frame" x="195" y="70" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -492,7 +439,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="xoz-tV-UTC"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esy-CK-fLJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="esy-CK-fLJ">
                                                     <rect key="frame" x="285" y="70" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -527,9 +474,19 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.074509803920000006" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="imageView1" destination="p5q-z5-2Wg" id="zVJ-Zp-3AJ"/>
+                                            <outlet property="imageView2" destination="bLL-9k-V6p" id="iLv-ao-lDb"/>
+                                            <outlet property="imageView3" destination="weI-Qv-Jnb" id="wPQ-QT-Jbs"/>
+                                            <outlet property="imageView4" destination="0Xt-8N-hyb" id="7Ui-Uh-nt9"/>
+                                            <outlet property="label1" destination="8IJ-aC-gvc" id="J63-ut-otr"/>
+                                            <outlet property="label2" destination="Iqd-Ut-Zpg" id="XXc-kL-S3Z"/>
+                                            <outlet property="label3" destination="IPB-dm-bcR" id="Reh-sx-K3v"/>
+                                            <outlet property="label4" destination="esy-CK-fLJ" id="9cc-nR-MXE"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SynopsisCell" textLabel="OUe-RE-yPj" rowHeight="30" style="IBUITableViewCellStyleDefault" id="jqM-ig-6vg">
-                                        <rect key="frame" x="0.0" y="518" width="375" height="30"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlotCell" textLabel="OUe-RE-yPj" rowHeight="30" style="IBUITableViewCellStyleDefault" id="jqM-ig-6vg">
+                                        <rect key="frame" x="0.0" y="528" width="375" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqM-ig-6vg" id="AjT-hp-Kn1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
@@ -564,7 +521,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sEI-um-LDg">
-                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                                <rect key="frame" x="177" y="273.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="TsY-ky-K6s"/>
                                     <constraint firstAttribute="height" constant="20" id="eC4-Ur-AL3"/>
@@ -573,14 +530,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.074059635400772095" green="0.089803196489810944" blue="0.089485205709934235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="sEI-um-LDg" firstAttribute="centerY" secondItem="NL2-Pi-mQS" secondAttribute="centerY" id="IUL-9m-unO"/>
+                            <constraint firstItem="sEI-um-LDg" firstAttribute="centerY" secondItem="NL2-Pi-mQS" secondAttribute="centerY" constant="-50" id="IUL-9m-unO"/>
                             <constraint firstAttribute="trailing" secondItem="eiA-Qk-cwn" secondAttribute="trailing" id="ZLf-AD-dHo"/>
-                            <constraint firstAttribute="trailing" secondItem="1h2-3T-N7k" secondAttribute="trailing" constant="10" id="a8d-se-ONO"/>
                             <constraint firstItem="eiA-Qk-cwn" firstAttribute="top" secondItem="NL2-Pi-mQS" secondAttribute="top" constant="20" id="dra-bN-qGe"/>
-                            <constraint firstItem="1h2-3T-N7k" firstAttribute="top" secondItem="9L6-ii-g2a" secondAttribute="bottom" constant="10" id="e7u-Np-aiZ"/>
                             <constraint firstItem="sEI-um-LDg" firstAttribute="centerX" secondItem="NL2-Pi-mQS" secondAttribute="centerX" id="gNa-Ai-RTs"/>
                             <constraint firstItem="eiA-Qk-cwn" firstAttribute="leading" secondItem="NL2-Pi-mQS" secondAttribute="leading" id="kXw-Vs-9Dw"/>
+                            <constraint firstItem="1h2-3T-N7k" firstAttribute="top" secondItem="9L6-ii-g2a" secondAttribute="bottom" constant="10" id="nF1-7z-QHr"/>
                             <constraint firstItem="Xl8-Fh-dX9" firstAttribute="top" secondItem="eiA-Qk-cwn" secondAttribute="bottom" id="ohU-sv-ODr"/>
+                            <constraint firstAttribute="trailing" secondItem="1h2-3T-N7k" secondAttribute="trailing" constant="10" id="rlI-t4-enh"/>
                         </constraints>
                     </view>
                     <connections>

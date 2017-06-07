@@ -6,6 +6,7 @@ target 'MovieCalendar' do
 
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'TagListView'
 
   target 'MovieCalendarTests' do
     inherit! :search_paths

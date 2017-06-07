@@ -9,13 +9,17 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import TagListView
 
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var movie: Movie?
+    var genresRequestFinished: Bool = false
     var showGenres: Bool = false
+    var castRequestFinished: Bool = false
     var showCast: Bool = false
-    var showSynopsis: Bool = false
+    var showPlot: Bool = false
+    var trailerRequestFinished: Bool = false
     
     // MARK: - IBOutlets
     
@@ -29,7 +33,10 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         movieTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: movieTableView.frame.size.width, height: 15.0))
         
-        getMovieDetails()
+        activityIndicator.startAnimating()
+        getGenres()
+        getCast()
+        getTrailerPath()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -38,13 +45,11 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - Web Requests
     
-    func getMovieDetails() {
+    func getGenres() {
         
         guard movie != nil else {
             return
         }
-        
-        activityIndicator.startAnimating()
         
         //Create URL
         
@@ -66,7 +71,10 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                     
                 case .success:
                     
-                    self.activityIndicator.stopAnimating()
+                    self.genresRequestFinished = true
+                    if self.castRequestFinished && self.trailerRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
                     
                     //Parse JSON
                     
@@ -76,37 +84,170 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                         
                         print(json)
                         
-                        // TODO: - Get genres, cast, synopsis, trailer path
-                        
-                        //Manage UI
-                        
-                        self.movieTableView.reloadData()
-                    }
-                    
-                case .failure(let error):
-                    
-                    self.activityIndicator.stopAnimating()
-                    
-                    //Display error
-                    
-                    var message = ""
-                    
-                    if let responseData = response.data {
-                        
-                        let json = JSON(responseData)
-                        
-                        if let statusMessage = json["status_message"].string {
-                            message = statusMessage
+                        if let genres = json["genres"].array, genres.count > 0 {
+                            
+                            self.movie!.genres = [String]()
+                            
+                            for genre in genres {
+                                
+                                if let name = genre["name"].string {
+                                    self.movie!.genres?.append(name)
+                                }
+                            }
+                            
+                            self.movieTableView.reloadData()
                         }
                     }
-                    else {
-                        message = error.localizedDescription
+                    
+                case .failure:
+                    
+                    self.genresRequestFinished = true
+                    if self.castRequestFinished && self.trailerRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
+                }
+            }
+        }
+    }
+    
+    func getCast() {
+        
+        guard movie != nil else {
+            return
+        }
+        
+        //Create URL
+        
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "11417eceae39883ea64f194cd0ed38ae")]
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.themoviedb.org"
+        urlComponents.path = "/3/movie/\(movie!.id)/credits"
+        urlComponents.queryItems = parameters
+        
+        if let url = urlComponents.url {
+            
+            //Send request
+            
+            Alamofire.request(url).validate().responseJSON { response in
+                
+                switch response.result {
+                    
+                case .success:
+                    
+                    self.castRequestFinished = true
+                    if self.genresRequestFinished && self.trailerRequestFinished {
+                        self.activityIndicator.stopAnimating()
                     }
                     
-                    let alertController = UIAlertController(title: "Failed To Get Movie Details", message: message, preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .default)
-                    alertController.addAction(action)
-                    self.present(alertController, animated: true, completion: nil)
+                    //Parse JSON
+                    
+                    if let value = response.result.value {
+                        
+                        let json = JSON(value)
+                        
+                        print(json)
+                        
+                        if let array = json["cast"].array, array.count > 0 {
+                            
+                            self.movie!.cast = [Cast]()
+                            
+                            for person in array {
+                                
+                                var name: String = ""
+                                if let jsonName = person["name"].string {
+                                    name = jsonName
+                                }
+                                
+                                var imagePath: String = ""
+                                if let jsonImagePath = person["profile_path"].string {
+                                    imagePath = jsonImagePath
+                                }
+                                
+                                let cast = Cast(name: name,
+                                                imagePath: imagePath)
+                                
+                                self.movie!.cast?.append(cast)
+                                if self.movie!.cast?.count == 4 {
+                                    break
+                                }
+                            }
+                            
+                            self.movieTableView.reloadData()
+                        }
+                    }
+                    
+                case .failure:
+                    
+                    self.castRequestFinished = true
+                    if self.genresRequestFinished && self.trailerRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
+                }
+            }
+        }
+    }
+    
+    func getTrailerPath() {
+        
+        guard movie != nil else {
+            return
+        }
+        
+        //Create URL
+        
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "11417eceae39883ea64f194cd0ed38ae")]
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.themoviedb.org"
+        urlComponents.path = "/3/movie/\(movie!.id)/videos"
+        urlComponents.queryItems = parameters
+        
+        if let url = urlComponents.url {
+            
+            //Send request
+            
+            Alamofire.request(url).validate().responseJSON { response in
+                
+                switch response.result {
+                    
+                case .success:
+                    
+                    self.trailerRequestFinished = true
+                    if self.genresRequestFinished && self.castRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
+                    
+                    //Parse JSON
+                    
+                    if let value = response.result.value {
+                        
+                        let json = JSON(value)
+                        
+                        print(json)
+                        
+                        if let videos = json["results"].array, videos.count > 0 {
+                            
+                            for video in videos {
+                                
+                                if let site = video["site"].string, site == "YouTube", let key = video["key"].string {
+                                    self.movie?.trailerPath = "https://www.youtube.com/watch?v=\(key)"
+                                    break
+                                }
+                            }
+                            
+                            self.movieTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                        }
+                    }
+                    
+                case .failure:
+                    
+                    self.trailerRequestFinished = true
+                    if self.genresRequestFinished && self.castRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
                 }
             }
         }
@@ -126,10 +267,10 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             if let count = movie!.cast?.count, count > 0 {
                 showCast = true
-                numberOfRows += Int(ceil(Double(count / 4))) + 1
+                numberOfRows += 2
             }
-            if let synopsis = movie!.synopsis, synopsis.characters.count > 0 {
-                showSynopsis = true
+            if let plot = movie!.plot, plot.characters.count > 0, plot != "no movie overview" {
+                showPlot = true
                 numberOfRows += 2
             }
             
@@ -150,15 +291,15 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    func synopsisHeaderRow() -> Int {
+    func plotHeaderRow() -> Int {
         
         var row: Int = 2
         
         if showGenres {
             row += 1
         }
-        if showCast, let count = movie?.cast?.count {
-            row += Int(ceil(Double(count / 4))) + 1
+        if showCast {
+            row += 2
         }
         
         return row
@@ -175,9 +316,15 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 { //PosterCell
-            return 231.0
+            
+            //Get proportional cell size (movie backdrops provided by The Movie DB are 533 x 300)
+            
+            let padding: CGFloat = 20.0
+            let width = UIScreen.main.bounds.width
+            let height = (300.0 * width / 533.0) + padding
+            return height
         }
-        else if (showCast && indexPath.row == castHeaderRow()) || (showSynopsis && indexPath.row == synopsisHeaderRow()) { //HeaderCell
+        else if (showCast && indexPath.row == castHeaderRow()) || (showPlot && indexPath.row == plotHeaderRow()) { //HeaderCell
             return 40.0
         }
         else {
@@ -187,13 +334,10 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == 1 { //TitleCell
+        if indexPath.row == 1 || (showGenres && indexPath.row == 2) { //TitleCell, GenresCell
             return 64.0
         }
-        else if showGenres && indexPath.row == 2 { //GenresCell
-            return 54.0
-        }
-        else if showSynopsis && indexPath.row == synopsisHeaderRow() + 1 { //SynopsisCell
+        else if showPlot && indexPath.row == plotHeaderRow() + 1 { //PlotCell
             return 30.0
         }
         else { //CastCell
@@ -209,7 +353,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell = tableView.dequeueReusableCell(withIdentifier: "BackdropCell", for: indexPath)
             
-            //Set movie backdrop
+            //Set backdrop
             
             let imageView = cell.viewWithTag(123) as! UIImageView
             
@@ -218,7 +362,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             else if let path = movie?.backdropPath, let url = URL(string: "https://image.tmdb.org/t/p/w533_and_h300_bestv2" + path) {
                 
-                imageView.setImage(withURL: url, placeholderImage: UIImage(named: "backdrop-placeholder")!, completion: { image in
+                imageView.setImage(withURL: url, placeholderImage: UIImage(named: "backdrop-placeholder")!, squareCrop: false, completion: { image in
                     if image != nil {
                         self.movie?.backdrop = image
                     }
@@ -230,8 +374,9 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             //Play button
             
-            let button = cell.viewWithTag(456) as! UIButton
             if movie?.trailerPath != nil {
+                
+                let button = cell.viewWithTag(456) as! UIButton
                 button.isHidden = false
             }
         }
@@ -239,7 +384,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath)
             
-            //Set movie title and release date
+            //Set title and release date
             
             cell.textLabel?.text = movie?.title
             if let month = movie?.releaseDate.monthString(), let day = movie?.releaseDate.day() {
@@ -258,7 +403,15 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell = tableView.dequeueReusableCell(withIdentifier: "GenresCell", for: indexPath)
             
-            // TODO: - Genres cell
+            //Set genres
+            
+            let tagListView = cell.viewWithTag(123) as! TagListView
+            
+            if let genres = movie?.genres, tagListView.tagViews.count == 0 {
+                
+                tagListView.textFont = UIFont(name:"Avenir", size: 17.0)!
+                tagListView.addTags(genres)
+            }
         }
         else if showCast && indexPath.row == castHeaderRow() {
             
@@ -266,51 +419,32 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell.textLabel?.text = "Cast"
         }
-        else if showSynopsis && indexPath.row == synopsisHeaderRow() {
-            
-            cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
-            
-            cell.textLabel?.text = "Synopsis"
-        }
-        else if showSynopsis && indexPath.row == synopsisHeaderRow() + 1 {
-            
-            cell = tableView.dequeueReusableCell(withIdentifier: "SynopsisCell", for: indexPath)
-            
-            cell.textLabel?.text = movie?.synopsis
-        }
-        else {
-            
-            // TODO: - Cast cell
+        else if showCast && indexPath.row == castHeaderRow() + 1 {
             
             cell = tableView.dequeueReusableCell(withIdentifier: "CastCell", for: indexPath)
             
-            let imageView1 = cell.viewWithTag(1) as! UIImageView
-            imageView1.layer.cornerRadius = imageView1.frame.size.width / 2
-            imageView1.clipsToBounds = true
+            //Set cast
             
-            let label1 = cell.viewWithTag(2) as! UILabel
-            label1.text = ""
+            if let cast = movie?.cast {
+                
+                for i in 0 ... cast.count - 1 {
+                    (cell as! CastCell).configureCast(cast[i], index: i)
+                }
+            }
+        }
+        else if showPlot && indexPath.row == plotHeaderRow() {
             
-            let imageView2 = cell.viewWithTag(3) as! UIImageView
-            imageView2.layer.cornerRadius = imageView2.frame.size.width / 2
-            imageView2.clipsToBounds = true
+            cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
             
-            let label2 = cell.viewWithTag(4) as! UILabel
-            label2.text = ""
+            cell.textLabel?.text = "Plot"
+        }
+        else {
             
-            let imageView3 = cell.viewWithTag(5) as! UIImageView
-            imageView3.layer.cornerRadius = imageView3.frame.size.width / 2
-            imageView3.clipsToBounds = true
+            cell = tableView.dequeueReusableCell(withIdentifier: "PlotCell", for: indexPath)
             
-            let label3 = cell.viewWithTag(6) as! UILabel
-            label3.text = ""
+            //Set plot
             
-            let imageView4 = cell.viewWithTag(7) as! UIImageView
-            imageView4.layer.cornerRadius = imageView4.frame.size.width / 2
-            imageView4.clipsToBounds = true
-            
-            let label4 = cell.viewWithTag(8) as! UILabel
-            label4.text = ""
+            cell.textLabel?.text = movie?.plot
         }
         
         return cell

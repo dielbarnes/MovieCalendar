@@ -10,8 +10,6 @@ import UIKit
 
 struct Cast {
     
-    var id: Int
     var name: String
-    var image: UIImage?
     var imagePath: String?
 }

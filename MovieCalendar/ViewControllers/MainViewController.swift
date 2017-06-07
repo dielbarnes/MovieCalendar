@@ -21,6 +21,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     var monthsWithMovies: [Int] = []
     var movies: [String: [Movie]] = [:]
+    var finishedGettingCurrentMovies: Bool = false
     var requestPage: Int = 1
     var hasMoreResults: Bool = false
     
@@ -35,16 +36,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //UI
-        
         addSpotlight(inRect: CGRect(x: 0, y: 0, width: 70.0, height: 70.0), position: .topLeft)
         addSpotlight(inRect: CGRect(x: view.center.x - 35.0, y: 0, width: 70.0, height: 70.0), position: .top)
         addSpotlight(inRect: CGRect(x: UIScreen.main.bounds.width - 70.0, y: 0, width: 70.0, height: 70.0), position: .topRight)
         
-        //Data
-        
-        // TODO: - Get upcoming movies
-        
+        activityIndicator.startAnimating()
         getMovies()
     }
     
@@ -55,10 +51,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: - Web Requests
     
     func getMovies() {
-        
-        if requestPage == 1 {
-            activityIndicator.startAnimating()
-        }
         
         //Create URL
         
@@ -74,7 +66,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.themoviedb.org"
-        urlComponents.path = "/3/movie/now_playing"
+        urlComponents.path = finishedGettingCurrentMovies ? "/3/movie/upcoming" : "/3/movie/now_playing"
         urlComponents.queryItems = parameters
         
         if let url = urlComponents.url {
@@ -86,8 +78,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 switch response.result {
                     
                 case .success:
-                    
-                    self.activityIndicator.stopAnimating()
                     
                     //Parse JSON
                     
@@ -101,46 +91,53 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                             
                             for result in results {
                                 
-                                var id: Int = -1
-                                if let jsonId = result["id"].int {
-                                    id = jsonId
-                                }
-                                
-                                var title: String = ""
-                                if let jsonTitle = result["title"].string {
-                                    title = jsonTitle
-                                }
-                                
-                                var posterPath: String?
-                                if let jsonPosterPath = result["poster_path"].string {
-                                    posterPath = jsonPosterPath
-                                }
-                                
-                                var backdropPath: String?
-                                if let jsonBackdropPath = result["backdrop_path"].string {
-                                    backdropPath = jsonBackdropPath
-                                }
-                                
                                 var releaseDate = Date()
                                 if let jsonReleaseDateString = result["release_date"].string, let jsonReleaseDate = jsonReleaseDateString.dateFromISO8601 {
                                     releaseDate = jsonReleaseDate
                                 }
                                 
-                                let movie = Movie(id: id,
-                                                  title: title,
-                                                  poster: nil,
-                                                  posterPath: posterPath,
-                                                  backdrop: nil,
-                                                  backdropPath: backdropPath,
-                                                  genres: nil,
-                                                  cast: nil,
-                                                  synopsis: nil,
-                                                  trailerPath: nil,
-                                                  releaseDate: releaseDate)
-                                
                                 //Get only recent and upcoming movies in the current year
                                 
                                 if releaseDate.year() == Date().year() && releaseDate.weeks(fromDate: Date()) >= -1 {
+                                    
+                                    var id: Int = -1
+                                    if let jsonId = result["id"].int {
+                                        id = jsonId
+                                    }
+                                    
+                                    var title: String = ""
+                                    if let jsonTitle = result["title"].string {
+                                        title = jsonTitle
+                                    }
+                                    
+                                    var posterPath: String?
+                                    if let jsonPosterPath = result["poster_path"].string {
+                                        posterPath = jsonPosterPath
+                                    }
+                                    
+                                    var backdropPath: String?
+                                    if let jsonBackdropPath = result["backdrop_path"].string {
+                                        backdropPath = jsonBackdropPath
+                                    }
+                                    
+                                    var plot: String = ""
+                                    if let jsonPlot = result["overview"].string {
+                                        plot = jsonPlot
+                                    }
+                                    
+                                    let movie = Movie(id: id,
+                                                      title: title,
+                                                      poster: nil,
+                                                      posterPath: posterPath,
+                                                      backdrop: nil,
+                                                      backdropPath: backdropPath,
+                                                      genres: nil,
+                                                      cast: nil,
+                                                      plot: plot,
+                                                      trailerPath: nil,
+                                                      releaseDate: releaseDate)
+                                    
+                                    //Store in array and sort by release date
                                     
                                     if !self.monthsWithMovies.contains(releaseDate.month()) {
                                         self.monthsWithMovies.append(releaseDate.month())
@@ -149,6 +146,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     
                                     if self.movies.keys.contains(releaseDate.monthString()) {
                                         self.movies[releaseDate.monthString()]!.append(movie)
+                                        self.movies[releaseDate.monthString()]!.sort {
+                                            return $0.releaseDate < $1.releaseDate
+                                        }
                                     }
                                     else {
                                         self.movies[releaseDate.monthString()] = [movie]
@@ -157,70 +157,91 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                             }
                         }
                         
-                        //Sort movies by release date
-                        
-                        for month in self.monthsWithMovies {
-                            let monthString = DateFormatter().monthSymbols[month-1]
-                            self.movies[monthString]?.sort {
-                                return $0.releaseDate < $1.releaseDate
-                            }
-                        }
-                        
                         //Check for more results
                         
                         if self.requestPage == json["total_pages"].int {
-                            self.hasMoreResults = false
+                            
+                            if !self.finishedGettingCurrentMovies {
+                                
+                                self.finishedGettingCurrentMovies = true
+                                
+                                self.hasMoreResults = true
+                                self.requestPage = 1
+                            }
+                            else {
+                                self.hasMoreResults = false
+                            }
                         }
                         else {
                             self.hasMoreResults = true
                             self.requestPage += 1
                         }
                         
-                        //Manage UI
+                        //Update UI
                         
                         if self.movies.count == 0 {
-                            self.noMoviesLabel.isHidden = false
+                            
+                            if !self.finishedGettingCurrentMovies || (self.finishedGettingCurrentMovies && self.requestPage == 1) {
+                                self.getMovies()
+                            }
+                            else {
+                                self.noMoviesLabel.isHidden = false
+                            }
                         }
                         else {
+                            self.activityIndicator.stopAnimating()
                             self.moviesCollectionView.reloadData()
                         }
                     }
                     
                 case .failure(let error):
                     
-                    self.activityIndicator.stopAnimating()
-                    
-                    //Display error
-                    
-                    if self.requestPage == 1 {
+                    if !self.finishedGettingCurrentMovies {
                         
-                        var message = ""
+                        //If getting current movies failed, get upcoming movies
                         
-                        if let responseData = response.data {
+                        self.finishedGettingCurrentMovies = true
+                        self.requestPage = 1
+                        
+                        self.getMovies()
+                    }
+                    else {
+                        
+                        //If getting upcoming movies failed, display error
+                        
+                        self.activityIndicator.stopAnimating()
+                        
+                        if self.movies.count == 0 {
                             
-                            let json = JSON(responseData)
+                            var message = ""
                             
-                            if let statusMessage = json["status_message"].string {
-                                message = statusMessage
+                            if let responseData = response.data {
+                                
+                                let json = JSON(responseData)
+                                
+                                if let statusMessage = json["status_message"].string {
+                                    message = statusMessage
+                                }
                             }
+                            else {
+                                message = error.localizedDescription
+                            }
+                            
+                            let alertController = UIAlertController(title: "Failed To Get Movies", message: message, preferredStyle: .alert)
+                            
+                            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+                                self.noMoviesLabel.isHidden = false
+                            })
+                            alertController.addAction(cancelAction)
+                            
+                            let refreshAction = UIAlertAction(title: "Try Again", style: .default, handler: { action in
+                                self.activityIndicator.startAnimating()
+                                self.getMovies()
+                            })
+                            alertController.addAction(refreshAction)
+                            
+                            self.present(alertController, animated: true, completion: nil)
                         }
-                        else {
-                            message = error.localizedDescription
-                        }
-                        
-                        let alertController = UIAlertController(title: "Failed To Get Movies", message: message, preferredStyle: .alert)
-                        
-                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
-                            self.noMoviesLabel.isHidden = false
-                        })
-                        alertController.addAction(cancelAction)
-                        
-                        let refreshAction = UIAlertAction(title: "Try Again", style: .default, handler: { action in
-                            self.getMovies()
-                        })
-                        alertController.addAction(refreshAction)
-                        
-                        self.present(alertController, animated: true, completion: nil)
                     }
                 }
             }
@@ -393,11 +414,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             let movie = moviesDuringMonth[indexPath.row]
             
-            //Set movie release date
+            //Set release date
             
             cell.configureBannerLabel(withDate: movie.releaseDate)
             
-            //Set movie poster
+            //Set poster
             
             if movie.poster != nil {
                 cell.posterView.image = movie.poster
@@ -405,7 +426,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
             else if let path = movie.posterPath, let url = URL(string: "https://image.tmdb.org/t/p/w160" + path) {
                 
-                cell.posterView.setImage(withURL: url, placeholderImage: UIImage(named: "poster-placeholder")!, completion: { image in
+                cell.posterView.setImage(withURL: url, placeholderImage: UIImage(named: "poster-placeholder")!, squareCrop: false, completion: { image in
                     
                     if image != nil, let index = self.movies[monthString]?.index(where: { $0.id == movie.id }) {
                         self.movies[monthString]?[index].poster = image

@@ -23,6 +23,7 @@
 		97810A701EE3005300A2C694 /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97810A6F1EE3005300A2C694 /* TrailerViewController.swift */; };
 		97810A731EE3386A00A2C694 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97810A721EE3386A00A2C694 /* ImageHelper.swift */; };
 		97810A761EE345BC00A2C694 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97810A751EE345BC00A2C694 /* MovieCell.swift */; };
+		97810A781EE6A23400A2C694 /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97810A771EE6A23400A2C694 /* CastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		97810A6F1EE3005300A2C694 /* TrailerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
 		97810A721EE3386A00A2C694 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		97810A751EE345BC00A2C694 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		97810A771EE6A23400A2C694 /* CastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastCell.swift; sourceTree = "<group>"; };
 		BFE57A8B8ABB7516D9606FB0 /* Pods-MovieCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCalendar/Pods-MovieCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				97810A751EE345BC00A2C694 /* MovieCell.swift */,
+				97810A771EE6A23400A2C694 /* CastCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				9706E3F51EE08DC60012EA26 /* Cast.swift in Sources */,
 				97810A761EE345BC00A2C694 /* MovieCell.swift in Sources */,
 				97810A701EE3005300A2C694 /* TrailerViewController.swift in Sources */,
+				97810A781EE6A23400A2C694 /* CastCell.swift in Sources */,
 				9706E3C51EE0691D0012EA26 /* MainViewController.swift in Sources */,
 				9706E3C31EE0691D0012EA26 /* AppDelegate.swift in Sources */,
 				9706E3F21EE08BA10012EA26 /* Movie.swift in Sources */,

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9BFAFBAB527BD126DAAC9D0616637DE5'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = 'D2B7DEBA52DD473A8873FF6B21CE0F77'
+               BlueprintName = 'TagListView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'TagListView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
