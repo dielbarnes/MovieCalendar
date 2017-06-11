@@ -20,6 +20,7 @@ struct Movie {
     var genres: [String]?
     var cast: [Cast]?
     var plot: String?
-    var trailerPath: String?
+    var trailerYouTubeId: String?
+    var trailerStreamUrl: URL?
     var releaseDate: Date
 }

@@ -48,6 +48,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         return .lightContent
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return.portrait
+    }
+    
     // MARK: - Web Requests
     
     func getMovies() {
@@ -105,53 +109,60 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                         id = jsonId
                                     }
                                     
-                                    var title: String = ""
-                                    if let jsonTitle = result["title"].string {
-                                        title = jsonTitle
-                                    }
+                                    //Check for duplicates
                                     
-                                    var posterPath: String?
-                                    if let jsonPosterPath = result["poster_path"].string {
-                                        posterPath = jsonPosterPath
-                                    }
-                                    
-                                    var backdropPath: String?
-                                    if let jsonBackdropPath = result["backdrop_path"].string {
-                                        backdropPath = jsonBackdropPath
-                                    }
-                                    
-                                    var plot: String = ""
-                                    if let jsonPlot = result["overview"].string {
-                                        plot = jsonPlot
-                                    }
-                                    
-                                    let movie = Movie(id: id,
-                                                      title: title,
-                                                      poster: nil,
-                                                      posterPath: posterPath,
-                                                      backdrop: nil,
-                                                      backdropPath: backdropPath,
-                                                      genres: nil,
-                                                      cast: nil,
-                                                      plot: plot,
-                                                      trailerPath: nil,
-                                                      releaseDate: releaseDate)
-                                    
-                                    //Store in array and sort by release date
-                                    
-                                    if !self.monthsWithMovies.contains(releaseDate.month()) {
-                                        self.monthsWithMovies.append(releaseDate.month())
-                                        self.monthsWithMovies.sort()
-                                    }
-                                    
-                                    if self.movies.keys.contains(releaseDate.monthString()) {
-                                        self.movies[releaseDate.monthString()]!.append(movie)
-                                        self.movies[releaseDate.monthString()]!.sort {
-                                            return $0.releaseDate < $1.releaseDate
+                                    let index = self.movies[releaseDate.monthString()]?.index(where: { $0.id == id })
+                                    if index == nil {
+                                        
+                                        var title: String = ""
+                                        if let jsonTitle = result["title"].string {
+                                            title = jsonTitle
                                         }
-                                    }
-                                    else {
-                                        self.movies[releaseDate.monthString()] = [movie]
+                                        
+                                        var posterPath: String?
+                                        if let jsonPosterPath = result["poster_path"].string {
+                                            posterPath = jsonPosterPath
+                                        }
+                                        
+                                        var backdropPath: String?
+                                        if let jsonBackdropPath = result["backdrop_path"].string {
+                                            backdropPath = jsonBackdropPath
+                                        }
+                                        
+                                        var plot: String = ""
+                                        if let jsonPlot = result["overview"].string {
+                                            plot = jsonPlot
+                                        }
+                                        
+                                        let movie = Movie(id: id,
+                                                          title: title,
+                                                          poster: nil,
+                                                          posterPath: posterPath,
+                                                          backdrop: nil,
+                                                          backdropPath: backdropPath,
+                                                          genres: nil,
+                                                          cast: nil,
+                                                          plot: plot,
+                                                          trailerYouTubeId: nil,
+                                                          trailerStreamUrl: nil,
+                                                          releaseDate: releaseDate)
+                                        
+                                        //Store in array and sort by release date
+                                        
+                                        if !self.monthsWithMovies.contains(releaseDate.month()) {
+                                            self.monthsWithMovies.append(releaseDate.month())
+                                            self.monthsWithMovies.sort()
+                                        }
+                                        
+                                        if self.movies.keys.contains(releaseDate.monthString()) {
+                                            self.movies[releaseDate.monthString()]!.append(movie)
+                                            self.movies[releaseDate.monthString()]!.sort {
+                                                return $0.releaseDate < $1.releaseDate
+                                            }
+                                        }
+                                        else {
+                                            self.movies[releaseDate.monthString()] = [movie]
+                                        }
                                     }
                                 }
                             }
@@ -159,7 +170,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                         
                         //Check for more results
                         
-                        if self.requestPage == json["total_pages"].int {
+                        if let totalPages = json["total_pages"].int, self.requestPage < totalPages {
+                            
+                            self.hasMoreResults = true
+                            self.requestPage += 1
+                        }
+                        else {
                             
                             if !self.finishedGettingCurrentMovies {
                                 
@@ -172,19 +188,16 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                 self.hasMoreResults = false
                             }
                         }
-                        else {
-                            self.hasMoreResults = true
-                            self.requestPage += 1
-                        }
                         
                         //Update UI
                         
                         if self.movies.count == 0 {
                             
-                            if !self.finishedGettingCurrentMovies || (self.finishedGettingCurrentMovies && self.requestPage == 1) {
+                            if !self.finishedGettingCurrentMovies || (self.finishedGettingCurrentMovies && self.hasMoreResults && self.requestPage == 1) {
                                 self.getMovies()
                             }
                             else {
+                                self.activityIndicator.stopAnimating()
                                 self.noMoviesLabel.isHidden = false
                             }
                         }

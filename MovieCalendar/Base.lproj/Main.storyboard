@@ -28,13 +28,13 @@
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="yYs-5U-q74">
                                     <size key="itemSize" width="120" height="175"/>
-                                    <size key="headerReferenceSize" width="50" height="70"/>
+                                    <size key="headerReferenceSize" width="50" height="90"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="10"/>
+                                    <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="TLf-ef-HC4" customClass="MovieCell" customModule="MovieCalendar" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="80" width="120" height="175"/>
+                                        <rect key="frame" x="5" y="100" width="120" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="175"/>
@@ -126,11 +126,11 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MonthHeaderView" id="vd2-dw-Clh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ4-tQ-292">
-                                            <rect key="frame" x="202.5" y="16" width="55" height="50"/>
+                                            <rect key="frame" x="202.5" y="21" width="55" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-Fo-Ehu">
                                                     <rect key="frame" x="0.0" y="10" width="55" height="30"/>
@@ -148,7 +148,7 @@
                                             </constraints>
                                         </view>
                                         <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qee-S1-LhL">
-                                            <rect key="frame" x="117.5" y="16" width="55" height="50"/>
+                                            <rect key="frame" x="117.5" y="21" width="55" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atF-A4-isN">
                                                     <rect key="frame" x="0.0" y="10" width="55" height="30"/>
@@ -166,11 +166,14 @@
                                             </constraints>
                                         </view>
                                         <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fG-ux-fNd">
-                                            <rect key="frame" x="147.5" y="10" width="80" height="50"/>
+                                            <rect key="frame" x="147.5" y="15" width="80" height="50"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="d8o-jQ-Akn"/>
+                                            </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUNE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-iy-hcT">
-                                            <rect key="frame" x="147.5" y="20" width="80" height="30"/>
+                                            <rect key="frame" x="147.5" y="25" width="80" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="7Fu-yv-dAT"/>
@@ -186,11 +189,10 @@
                                         <constraint firstItem="5fG-ux-fNd" firstAttribute="centerX" secondItem="vd2-dw-Clh" secondAttribute="centerX" id="KSH-YM-Q6P"/>
                                         <constraint firstItem="z4B-iy-hcT" firstAttribute="centerX" secondItem="vd2-dw-Clh" secondAttribute="centerX" id="VQr-W9-EoE"/>
                                         <constraint firstItem="5fG-ux-fNd" firstAttribute="width" secondItem="z4B-iy-hcT" secondAttribute="width" id="adP-cj-A78"/>
-                                        <constraint firstItem="Qee-S1-LhL" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="6" id="bwb-Cr-TCK"/>
-                                        <constraint firstItem="xJ4-tQ-292" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="6" id="kae-Ya-crr"/>
-                                        <constraint firstItem="5fG-ux-fNd" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" id="mz0-KL-Lex"/>
-                                        <constraint firstItem="z4B-iy-hcT" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" id="wXl-jo-t8j"/>
-                                        <constraint firstItem="5fG-ux-fNd" firstAttribute="height" secondItem="z4B-iy-hcT" secondAttribute="height" multiplier="50:30" id="y2S-QR-xbq"/>
+                                        <constraint firstItem="Qee-S1-LhL" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="1" id="bwb-Cr-TCK"/>
+                                        <constraint firstItem="xJ4-tQ-292" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="1" id="kae-Ya-crr"/>
+                                        <constraint firstItem="5fG-ux-fNd" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="-5" id="mz0-KL-Lex"/>
+                                        <constraint firstItem="z4B-iy-hcT" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="-5" id="wXl-jo-t8j"/>
                                         <constraint firstItem="xJ4-tQ-292" firstAttribute="leading" secondItem="z4B-iy-hcT" secondAttribute="trailing" constant="-25" id="zQ4-8u-Nsk"/>
                                     </constraints>
                                 </collectionReusableView>
@@ -492,11 +494,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Lorem ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUe-RE-yPj">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUe-RE-yPj">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                    <color key="textColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Lorem ipsum">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.78431379795074463" green="0.78431379795074463" blue="0.78431367874145508" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="16" name="Avenir-Book"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="20" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -510,10 +519,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-3T-N7k">
-                                <rect key="frame" x="343" y="30" width="22" height="22"/>
+                                <rect key="frame" x="341" y="30" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="2Eg-4q-He8"/>
-                                    <constraint firstAttribute="width" constant="22" id="iKz-iB-mVi"/>
+                                    <constraint firstAttribute="height" constant="24" id="2Eg-4q-He8"/>
+                                    <constraint firstAttribute="width" constant="24" id="iKz-iB-mVi"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
                                 <connections>
@@ -548,24 +557,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZt-T1-B3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="134"/>
-        </scene>
-        <!--Trailer View Controller-->
-        <scene sceneID="vr5-YV-NDt">
-            <objects>
-                <viewController storyboardIdentifier="TrailerViewController" id="NF6-AI-lgc" customClass="TrailerViewController" customModule="MovieCalendar" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qGK-Uy-bCi"/>
-                        <viewControllerLayoutGuide type="bottom" id="lkI-kf-jNO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wZb-8n-fOd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.074509803920000006" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wej-sk-jdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1510" y="134"/>
         </scene>
     </scenes>
     <resources>

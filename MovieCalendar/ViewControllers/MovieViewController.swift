@@ -37,11 +37,15 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         activityIndicator.startAnimating()
         getGenres()
         getCast()
-        getTrailerPath()
+        getTrailerYouTubeId()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return.portrait
     }
     
     // MARK: - Web Requests
@@ -190,7 +194,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    func getTrailerPath() {
+    func getTrailerYouTubeId() {
         
         guard movie != nil else {
             return
@@ -216,11 +220,6 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                     
                 case .success:
                     
-                    self.trailerRequestFinished = true
-                    if self.genresRequestFinished && self.castRequestFinished {
-                        self.activityIndicator.stopAnimating()
-                    }
-                    
                     //Parse JSON
                     
                     if let value = response.result.value {
@@ -234,12 +233,87 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                             for video in videos {
                                 
                                 if let site = video["site"].string, site == "YouTube", let key = video["key"].string {
-                                    self.movie?.trailerPath = "https://www.youtube.com/watch?v=\(key)"
+                                    self.movie?.trailerYouTubeId = key
                                     break
                                 }
                             }
+                        }
+                        
+                        if self.movie?.trailerYouTubeId != nil {
+                            self.getTrailerStreamUrl()
+                        }
+                        else {
+                            self.trailerRequestFinished = true
+                            if self.genresRequestFinished && self.castRequestFinished {
+                                self.activityIndicator.stopAnimating()
+                            }
+                        }
+                    }
+                    
+                case .failure:
+                    
+                    self.trailerRequestFinished = true
+                    if self.genresRequestFinished && self.castRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
+                }
+            }
+        }
+    }
+    
+    func getTrailerStreamUrl() {
+        
+        guard movie?.trailerYouTubeId != nil else {
+            return
+        }
+        
+        //Create URL
+        
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "video_id", value: movie!.trailerYouTubeId)]
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "www.youtube.com"
+        urlComponents.path = "/get_video_info"
+        urlComponents.queryItems = parameters
+        
+        if let url = urlComponents.url {
+            
+            //Send request
+            
+            Alamofire.request(url).validate().responseString { response in
+                
+                switch response.result {
+                    
+                case .success:
+                    
+                    self.trailerRequestFinished = true
+                    if self.genresRequestFinished && self.castRequestFinished {
+                        self.activityIndicator.stopAnimating()
+                    }
+                    
+                    //Parse response string
+                    
+                    if let value = response.result.value {
+                        
+                        let dict = value.dictionaryFromQueryStringComponents()
+                        if let status = dict["status"] {
                             
-                            self.movieTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                            if status == "ok", let streamMap = dict["url_encoded_fmt_stream_map"] {
+                                
+                                for component in streamMap.components(separatedBy: ",") {
+                                    
+                                    let streamDict = component.dictionaryFromQueryStringComponents()
+                                    
+                                    if let type = streamDict["type"], type.contains("mp4"), let urlString = streamDict["url"]?.removingPercentEncoding, let url = URL(string: urlString) {
+                                        
+                                        self.movie!.trailerStreamUrl = url
+                                        break
+                                    }
+                                }
+                                
+                                self.movieTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                            }
                         }
                     }
                     
@@ -270,7 +344,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                 showCast = true
                 numberOfRows += 2
             }
-            if let plot = movie!.plot, plot.characters.count > 0, plot != "no movie overview" {
+            if let plot = movie!.plot, plot.characters.count > 0, plot != "no movie overview", plot != "No movie found." {
                 showPlot = true
                 numberOfRows += 2
             }
@@ -375,7 +449,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             //Play button
             
-            if movie?.trailerPath != nil {
+            if movie?.trailerStreamUrl != nil {
                 
                 let button = cell.viewWithTag(456) as! UIButton
                 button.isHidden = false
@@ -394,11 +468,26 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             //Save to calendar button
             
-            let button = UIButton(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
-            button.setImage(UIImage(named: "save-calendar"), for: .normal)
-            button.addTarget(self, action: #selector(saveToCalendarButtonTapped), for: .touchUpInside)
-            cell.accessoryView = button
+            if let releaseDate = movie?.releaseDate {
+                
+                if releaseDate.month() == Date().month() && releaseDate.day() == Date().day() {
+                    
+                    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 60.0, height: 21.0))
+                    label.font = UIFont(name:"Futura-Medium", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
+                    label.textColor = UIColor(red: 237.0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+                    label.textAlignment = .right
+                    label.text = "TODAY"
+                    cell.accessoryView = label
+                }
+                else if releaseDate.month() > Date().month() || (releaseDate.month() == Date().month() && releaseDate.day() > Date().day()) {
+                    
+                    let button = UIButton(type: .custom)
+                    button.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
+                    button.setImage(UIImage(named: "save-calendar"), for: .normal)
+                    button.addTarget(self, action: #selector(saveToCalendarButtonTapped), for: .touchUpInside)
+                    cell.accessoryView = button
+                }
+            }
         }
         else if showGenres && indexPath.row == 2 {
             
@@ -410,7 +499,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             if let genres = movie?.genres, tagListView.tagViews.count == 0 {
                 
-                tagListView.textFont = UIFont(name:"Avenir", size: 16.0)!
+                tagListView.textFont = UIFont(name:"Avenir", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
                 tagListView.addTags(genres)
             }
         }
@@ -445,7 +534,23 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             //Set plot
             
-            cell.textLabel?.text = movie?.plot
+            if let plot = movie?.plot {
+                
+                if plot.contains("\r") {
+                    
+                    let font = UIFont(name:"Avenir", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
+                    
+                    let paragraphStyle = NSMutableParagraphStyle()
+                    paragraphStyle.firstLineHeadIndent = 20.0
+                    
+                    let attributes = [NSForegroundColorAttributeName: UIColor(red: 210.0/255.0, green: 210.0/255.0, blue: 210.0/255.0, alpha: 1.0), NSFontAttributeName: font, NSParagraphStyleAttributeName: paragraphStyle]
+                    
+                    cell.textLabel?.attributedText = NSMutableAttributedString(string: plot, attributes: attributes)
+                }
+                else {
+                    cell.textLabel?.text = plot
+                }
+            }
         }
         
         return cell
@@ -461,9 +566,11 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Play trailer
         
-        let viewController = storyboard!.instantiateViewController(withIdentifier: "TrailerViewController") as! TrailerViewController
-        viewController.movieTrailerPath = movie?.trailerPath
-        show(viewController, sender: self)
+        if let url = movie?.trailerStreamUrl {
+            
+            let viewController = TrailerPlayerViewController(url: url)
+            show(viewController, sender: self)
+        }
     }
     
     func saveToCalendarButtonTapped() {

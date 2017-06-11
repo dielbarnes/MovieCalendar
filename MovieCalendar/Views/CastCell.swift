@@ -50,10 +50,10 @@ class CastCell: UITableViewCell {
         
         label.text = cast.name
         if UIScreen.main.bounds.size.height == 568.0 { //iPhone 5
-            label.font = UIFont(name:"Avenir", size: 13.0)!
+            label.font = UIFont(name:"Avenir", size: 13.0) ?? UIFont.systemFont(ofSize: 13.0)
         }
         else if UIScreen.main.bounds.size.height == 667.0 { //iPhone 6, iPhone 7
-            label.font = UIFont(name:"Avenir", size: 14.0)!
+            label.font = UIFont(name:"Avenir", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
         }
     }
 }

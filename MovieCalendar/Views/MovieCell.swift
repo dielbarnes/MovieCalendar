@@ -75,8 +75,8 @@ class MovieCell: UICollectionViewCell {
     
     func configureBannerLabel(withDate date: Date) {
         
-        let weekdayFont = UIFont(name:"Futura-Medium", size: 10.0)
-        let dayFont = UIFont(name:"Futura-Bold", size: 12.0)
+        let weekdayFont = UIFont(name:"Futura-Medium", size: 10.0) ?? UIFont.systemFont(ofSize: 10.0)
+        let dayFont = UIFont(name:"Futura-Bold", size: 12.0) ?? UIFont.boldSystemFont(ofSize: 12.0)
         
         let weekdayAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: weekdayFont]
         let dayAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: dayFont]
