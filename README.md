@@ -9,7 +9,8 @@ Uses AVFoundation
 Uses EventKit  
 Uses Alamofire 4.4.0 (https://cocoapods.org/pods/Alamofire)  
 Uses SwiftyJSON 3.1.4 (https://cocoapods.org/pods/SwiftyJSON)  
-Uses TagListView 1.2.0 (https://cocoapods.org/pods/TagListView)
+Uses TagListView 1.2.0 (https://cocoapods.org/pods/TagListView)  
+Custom transition animation
 
 ### Resources
 Icons are made by me
