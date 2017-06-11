@@ -45,5 +45,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>TMDB API Key</key>
+	<string>11417eceae39883ea64f194cd0ed38ae</string>
 </dict>
 </plist>

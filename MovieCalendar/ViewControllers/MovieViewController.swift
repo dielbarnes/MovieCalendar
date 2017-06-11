@@ -58,7 +58,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Create URL
         
-        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "11417eceae39883ea64f194cd0ed38ae")]
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: AppDelegate.key)]
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -123,7 +123,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Create URL
         
-        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "11417eceae39883ea64f194cd0ed38ae")]
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: AppDelegate.key)]
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -202,7 +202,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Create URL
         
-        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "11417eceae39883ea64f194cd0ed38ae")]
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: AppDelegate.key)]
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -447,7 +447,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                 imageView.image = UIImage(named: "backdrop-placeholder")
             }
             
-            //Play button
+            //Show play button if trailer is available
             
             if movie?.trailerStreamUrl != nil {
                 
@@ -466,11 +466,11 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell.detailTextLabel?.text = "\(month) \(day)"
             }
             
-            //Save to calendar button
-            
             if let releaseDate = movie?.releaseDate {
                 
                 if releaseDate.month() == Date().month() && releaseDate.day() == Date().day() {
+                    
+                    //Indicate if the release date is the current day
                     
                     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 60.0, height: 21.0))
                     label.font = UIFont(name:"Futura-Medium", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
@@ -480,6 +480,8 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                     cell.accessoryView = label
                 }
                 else if releaseDate.month() > Date().month() || (releaseDate.month() == Date().month() && releaseDate.day() > Date().day()) {
+                    
+                    //Show save to calendar button for future dates
                     
                     let button = UIButton(type: .custom)
                     button.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
@@ -537,6 +539,8 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             if let plot = movie?.plot {
                 
                 if plot.contains("\r") {
+                    
+                    //Add indention to text with multiple paragraphs
                     
                     let font = UIFont(name:"Avenir", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
                     

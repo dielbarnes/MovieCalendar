@@ -63,7 +63,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             countryCode = code
         }
         
-        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "11417eceae39883ea64f194cd0ed38ae"),
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: AppDelegate.key),
                                           //URLQueryItem(name: "region", value: countryCode),
                                           URLQueryItem(name: "page", value: "\(requestPage)")]
         
