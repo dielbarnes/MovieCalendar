@@ -1,5 +1,5 @@
 # MovieCalendar
-Shows current and upcoming movies and allows users to watch trailers
+Shows recent and upcoming movies and allows users to watch trailers and save theatrical release dates to their calendar
 
 <img src="https://img.shields.io/badge/ios-10-8800A7.svg"> <img src="https://img.shields.io/badge/language-swift%203.0-8800A7.svg">
 
