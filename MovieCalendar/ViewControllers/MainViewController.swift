@@ -17,7 +17,7 @@ enum SpotlightPosition: Int {
     case topRight
 }
 
-class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIViewControllerTransitioningDelegate {
 
     var monthsWithMovies: [Int] = []
     var movies: [String: [Movie]] = [:]
@@ -473,6 +473,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             let viewController = storyboard!.instantiateViewController(withIdentifier: "MovieViewController") as! MovieViewController
             viewController.movie = movie
+            viewController.transitioningDelegate = self
             show(viewController, sender: self)
         }
     }
@@ -486,5 +487,41 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             hasMoreResults = false
             getMovies()
         }
+    }
+    
+    // MARK: - Transitions
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let imageView = getSelectedCellImageView() {
+            return ZoomTransition(animation: .zoomIn, imageView: imageView)
+        }
+        
+        return nil
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let imageView = getSelectedCellImageView() {
+            return ZoomTransition(animation: .zoomOut, imageView: imageView)
+        }
+        
+        return nil
+    }
+    
+    func getSelectedCellImageView() -> UIImageView? {
+        
+        if let indexPath = moviesCollectionView.indexPathsForSelectedItems?.first {
+            
+            let cell = moviesCollectionView.cellForItem(at: indexPath) as! MovieCell
+            
+            let frame = cell.posterView.convert(cell.posterView.frame, to: self.view)
+            let imageView = UIImageView(frame: frame)
+            imageView.image = cell.posterView.image
+            
+            return imageView
+        }
+        
+        return nil
     }
 }
