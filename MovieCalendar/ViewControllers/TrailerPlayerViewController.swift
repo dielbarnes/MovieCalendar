@@ -14,7 +14,7 @@ class TrailerPlayerViewController: AVPlayerViewController {
     init(url: URL) {
         super.init(nibName: nil, bundle: nil)
         
-        self.player = AVPlayer(url: url)
+        player = AVPlayer(url: url)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,6 +24,6 @@ class TrailerPlayerViewController: AVPlayerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.player?.play()
+        player?.play()
     }
 }

@@ -25,7 +25,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U9k-Ca-0fb">
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
-                                <color key="backgroundColor" red="0.074509803921568626" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.074509792029857635" green="0.090196087956428528" blue="0.090196073055267334" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="yYs-5U-q74">
                                     <size key="itemSize" width="120" height="175"/>
                                     <size key="headerReferenceSize" width="50" height="90"/>
@@ -129,6 +129,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-ld-RSb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XBQ-6n-UHZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <blurEffect style="dark"/>
+                                        </visualEffectView>
+                                        <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzu-A4-Nu0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <color key="backgroundColor" red="0.074509792029999994" green="0.090196087960000004" blue="0.090196073060000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                         <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ4-tQ-292">
                                             <rect key="frame" x="202.5" y="21" width="55" height="50"/>
                                             <subviews>
@@ -184,13 +196,22 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="hzZ-ld-RSb" secondAttribute="bottom" id="1rz-yQ-nas"/>
+                                        <constraint firstAttribute="bottom" secondItem="pzu-A4-Nu0" secondAttribute="bottom" id="7WV-gS-hbQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="hzZ-ld-RSb" secondAttribute="trailing" id="CHC-zs-6hx"/>
                                         <constraint firstItem="z4B-iy-hcT" firstAttribute="leading" secondItem="Qee-S1-LhL" secondAttribute="trailing" constant="-25" id="Hmi-qv-lMR"/>
                                         <constraint firstItem="5fG-ux-fNd" firstAttribute="centerX" secondItem="vd2-dw-Clh" secondAttribute="centerX" id="KSH-YM-Q6P"/>
+                                        <constraint firstItem="hzZ-ld-RSb" firstAttribute="leading" secondItem="vd2-dw-Clh" secondAttribute="leading" id="Si5-8l-xfy"/>
+                                        <constraint firstAttribute="trailing" secondItem="pzu-A4-Nu0" secondAttribute="trailing" id="UxD-Yw-nC0"/>
                                         <constraint firstItem="z4B-iy-hcT" firstAttribute="centerX" secondItem="vd2-dw-Clh" secondAttribute="centerX" id="VQr-W9-EoE"/>
+                                        <constraint firstItem="hzZ-ld-RSb" firstAttribute="top" secondItem="vd2-dw-Clh" secondAttribute="top" id="Vum-xI-PwP"/>
                                         <constraint firstItem="5fG-ux-fNd" firstAttribute="width" secondItem="z4B-iy-hcT" secondAttribute="width" id="adP-cj-A78"/>
                                         <constraint firstItem="Qee-S1-LhL" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="1" id="bwb-Cr-TCK"/>
+                                        <constraint firstItem="pzu-A4-Nu0" firstAttribute="top" secondItem="vd2-dw-Clh" secondAttribute="top" id="izO-CV-Hgz"/>
                                         <constraint firstItem="xJ4-tQ-292" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="1" id="kae-Ya-crr"/>
+                                        <constraint firstItem="pzu-A4-Nu0" firstAttribute="leading" secondItem="vd2-dw-Clh" secondAttribute="leading" id="lhv-GE-d8t"/>
                                         <constraint firstItem="5fG-ux-fNd" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="-5" id="mz0-KL-Lex"/>
                                         <constraint firstItem="z4B-iy-hcT" firstAttribute="centerY" secondItem="vd2-dw-Clh" secondAttribute="centerY" constant="-5" id="wXl-jo-t8j"/>
                                         <constraint firstItem="xJ4-tQ-292" firstAttribute="leading" secondItem="z4B-iy-hcT" secondAttribute="trailing" constant="-25" id="zQ4-8u-Nsk"/>
@@ -537,7 +558,7 @@
                                 </constraints>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.074059635400772095" green="0.089803196489810944" blue="0.089485205709934235" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.074059627950191498" green="0.089803166687488556" blue="0.089485205709934235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sEI-um-LDg" firstAttribute="centerY" secondItem="NL2-Pi-mQS" secondAttribute="centerY" constant="-50" id="IUL-9m-unO"/>
                             <constraint firstAttribute="trailing" secondItem="eiA-Qk-cwn" secondAttribute="trailing" id="ZLf-AD-dHo"/>
@@ -563,6 +584,6 @@
         <image name="backdrop-placeholder" width="16" height="16"/>
         <image name="close" width="16" height="16"/>
         <image name="play" width="16" height="16"/>
-        <image name="poster-placeholder" width="16" height="16"/>
+        <image name="poster-placeholder" width="640" height="1138"/>
     </resources>
 </document>

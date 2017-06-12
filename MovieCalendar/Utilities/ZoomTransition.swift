@@ -24,6 +24,8 @@ class ZoomTransition: NSObject, UIViewControllerAnimatedTransitioning {
         self.imageView = imageView
     }
     
+    // MARK: - UIViewControllerAnimatedTransitioning Methods
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.8
     }
@@ -36,7 +38,9 @@ class ZoomTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         let containerView = transitionContext.containerView
         
-        if animation == .zoomIn {
+        if animation == .zoomIn { //Present animation
+            
+            //Add views in transition container
             
             containerView.addSubview(imageView!)
             
@@ -52,22 +56,30 @@ class ZoomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             UIView.animate(withDuration: 0.3, animations: {
                 
+                //Zoom in source image view
+                
                 let width = self.imageView!.frame.size.width * 3.37
                 let height = self.imageView!.frame.size.height * 3.37
                 
                 self.imageView!.frame = CGRect(x: 0, y: 20.0, width: width, height: height)
                 self.imageView!.transform = CGAffineTransform(scaleX: 3.37, y: 3.37)
-                self.imageView!.alpha = 0
                 
+                //Hide source image view
+                
+                self.imageView!.alpha = 0
                 colorTransitionView.alpha = 1.0
                 
             }, completion: { finished in
                 
                 UIView.animate(withDuration: 0.5, animations: {
                     
+                    //Show destination view
+                    
                     destinationViewController.view.alpha = 1.0
                     
                 }, completion: { finished in
+                    
+                    //Finish transition
                     
                     transitionContext.completeTransition(finished)
                     
@@ -79,7 +91,9 @@ class ZoomTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 })
             })
         }
-        else {
+        else { //Dismiss animation
+            
+            //Add views in transition container
             
             let destinationFrame = imageView!.frame
             
@@ -99,11 +113,15 @@ class ZoomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             UIView.animate(withDuration: 0.3, animations: {
                 
+                //Hide source view
+                
                 sourceViewController.view.alpha = 0
                 
             }, completion: { finished in
                 
                 UIView.animate(withDuration: 0.5, animations: {
+                    
+                    //Zoom out destination image view
                     
                     colorTransitionView.frame = destinationFrame
                     colorTransitionView.alpha = 0
@@ -113,6 +131,8 @@ class ZoomTransition: NSObject, UIViewControllerAnimatedTransitioning {
                     self.imageView!.alpha = 0
                     
                 }, completion: { finished in
+                    
+                    //Finish transition
                     
                     transitionContext.completeTransition(finished)
                     

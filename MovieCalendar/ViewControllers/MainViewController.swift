@@ -40,6 +40,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         addSpotlight(inRect: CGRect(x: view.center.x - 35.0, y: 0, width: 70.0, height: 70.0), position: .top)
         addSpotlight(inRect: CGRect(x: UIScreen.main.bounds.width - 70.0, y: 0, width: 70.0, height: 70.0), position: .topRight)
         
+        let layout = moviesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionHeadersPinToVisibleBounds = true
+        
         activityIndicator.startAnimating()
         getMovies()
     }
@@ -337,6 +340,16 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         if kind == UICollectionElementKindSectionHeader {
             
             view = collectionView .dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MonthHeaderView", for: indexPath)
+            
+            //Background gradient
+            
+            let gradientView = view.viewWithTag(5)!
+            
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = gradientView.bounds
+            gradientLayer.colors = [UIColor.black.cgColor, UIColor.clear.cgColor]
+            gradientLayer.locations = [0, 0.5]
+            gradientView.layer.mask = gradientLayer
             
             //Set section title
             

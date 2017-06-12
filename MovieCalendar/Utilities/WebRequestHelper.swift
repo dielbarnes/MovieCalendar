@@ -1,5 +1,5 @@
 //
-//  StringHelper.swift
+//  WebRequestHelper.swift
 //  MovieCalendar
 //
 //  Created by Diel on 11/06/2017.
