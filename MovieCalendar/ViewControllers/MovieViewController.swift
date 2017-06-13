@@ -100,6 +100,8 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 }
                             }
                             
+                            //Update UI
+                            
                             self.movieTableView.reloadData()
                         }
                     }
@@ -179,6 +181,8 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 }
                             }
                             
+                            //Update UI
+                            
                             self.movieTableView.reloadData()
                         }
                     }
@@ -238,6 +242,8 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 }
                             }
                         }
+                        
+                        //Get stream URL
                         
                         if self.movie?.trailerYouTubeId != nil {
                             self.getTrailerStreamUrl()
@@ -311,6 +317,8 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                                         break
                                     }
                                 }
+                                
+                                //Update UI
                                 
                                 self.movieTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
                             }
