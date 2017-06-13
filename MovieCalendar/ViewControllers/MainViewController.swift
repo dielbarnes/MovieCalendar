@@ -61,10 +61,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         //Create URL
         
-        var countryCode = ""
+        /*var countryCode = ""
         if let code = (Locale.current as NSLocale).object(forKey: .countryCode) as? String {
             countryCode = code
-        }
+        }*/
         
         let parameters: [URLQueryItem] = [URLQueryItem(name: "api_key", value: AppDelegate.key),
                                           //URLQueryItem(name: "region", value: countryCode),
