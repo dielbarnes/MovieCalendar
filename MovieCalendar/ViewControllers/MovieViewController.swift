@@ -352,7 +352,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                 showCast = true
                 numberOfRows += 2
             }
-            if let plot = movie!.plot, plot.characters.count > 0, plot != "no movie overview", plot != "No movie found." {
+            if let plot = movie!.plot, plot.characters.count > 0, plot != "no movie overview", plot != "No overview found." {
                 showPlot = true
                 numberOfRows += 2
             }
