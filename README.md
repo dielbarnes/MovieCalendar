@@ -12,6 +12,3 @@ Uses SwiftyJSON 3.1.4 (https://cocoapods.org/pods/SwiftyJSON)
 Uses TagListView 1.2.0 (https://cocoapods.org/pods/TagListView)  
 Custom transition animation  
 Gradient and blur effects
-
-### Resources
-Icons are made by me
